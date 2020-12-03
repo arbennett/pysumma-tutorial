@@ -1,4 +1,4 @@
-[![Website](http://pysumma.tk/intro.html)](pySUMMA JupyterBook)
+[![Website](https://img.shields.io/badge/Website-pypkgs.org-blue)](https://pysumma.tk/)
 
 # pysumma-tutorial
 
