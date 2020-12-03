@@ -1,4 +1,4 @@
-[![Website](https://github.com/DavidChoi76/pysumma-tutorial/blob/gh-pages/JupyterBook1.png)](https://davidchoi76.github.io/pysumma-tutorial/)
+[![Website](https://github.com/DavidChoi76/pysumma-tutorial/blob/master/docs/logo.png)](https://davidchoi76.github.io/pysumma-tutorial/)
 
 # pysumma-tutorial
 
