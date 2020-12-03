@@ -1,0 +1,1606 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A. Explore file manger of SUMMA 3.0.0 &#8212; pySUMMA Tutorial Jupyter Notebooks</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Content with notebooks" href="notebooks.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">pySUMMA Tutorial Jupyter Notebooks</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to pySUMMA Tutorial Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="content.html">
+   Content in Jupyter Book
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="markdown.html">
+     Markdown Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notebooks.html">
+     Content with notebooks
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     A. Explore file manger of SUMMA 3.0.0
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/A. Explore file manger of SUMMA 3.0.3.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/DavidChoi76/pysumma-tutorial"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/DavidChoi76/pysumma-tutorial/issues/new?title=Issue%20on%20page%20%2FA. Explore file manger of SUMMA 3.0.3.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/DavidChoi76/pysumma-tutorial/master?urlpath=tree/docs/A. Explore file manger of SUMMA 3.0.3.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-pysumma-3-0-0">
+   1. Import pySUMMA 3.0.0
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-simulatioin-object">
+   2. Create Simulatioin Object
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#explore-file-manager">
+   3. Explore file manager
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#show-file-manager-using-orginal-contents-attribute">
+     3.1 Show file manager using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       orginal_contents
+      </span>
+     </code>
+     attribute
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#show-file-manager-using-print-command">
+     3.2 Show file manager using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       print
+      </span>
+     </code>
+     command
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-value-of-each-line-in-file-manager">
+     3.3 Get value of each line in file manager
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#change-the-value-of-each-line-in-file-manager">
+     3.4 Change the value of each line in file manager
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#look-at-other-configuration-files-using-manager-modules">
+     3.5 Look at other configuration files using manager modules
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="a-explore-file-manger-of-summa-3-0-0">
+<h1>A. Explore file manger of SUMMA 3.0.0<a class="headerlink" href="#a-explore-file-manger-of-summa-3-0-0" title="Permalink to this headline">¶</a></h1>
+<p>SUMMA has a large number of input files that configure the model and provide the necessary initial conditions and time-varying boundary conditions to make a model simulation. This can at times be confusing. We encourage the user to look at the SUMMA test cases, which provide working SUMMA setups.</p>
+<p>The <strong><code class="docutils literal notranslate"><span class="pre">master</span> <span class="pre">configuration</span> <span class="pre">file</span></code></strong> (called <strong><code class="docutils literal notranslate"><span class="pre">file</span> <span class="pre">manger</span></code></strong>) is an <strong>ASCII file</strong> and is provided to SUMMA at run-time as a command-line option. The path to this file needs to be supplied with the <strong><code class="docutils literal notranslate"><span class="pre">-m</span></code></strong> or <strong><code class="docutils literal notranslate"><span class="pre">--master</span></code></strong> command-line flag. The contents of this file orchestrate the remainder of the SUMMA run and are processed by the code in <strong><code class="docutils literal notranslate"><span class="pre">build/source/hookup/summaFileManager.f90</span></code></strong>. The file contents mostly consist of file paths that provide the actual information about the model configuration.</p>
+<p>The following items must be provided in order in the master configuration file. Each item must be on its own line, but may be followed by a comment and you can add lines of comments between the items. Each entry must be enclosed in single quotes ‘entry’. In the following, I start each enumerated entry with the actual variable name that is used in the SUMMA source code to refer to each of the entries (in summaFileManager.f90) and its default value in case you are trying to trace a problem.</p>
+<p>The model file manager file must also contain the start (<code class="docutils literal notranslate"><span class="pre">simStartTime</span></code>) and end (<code class="docutils literal notranslate"><span class="pre">simEndTime</span></code>) times of the simulation. These are specified as <code class="docutils literal notranslate"><span class="pre">'YYYY-MM-DD</span> <span class="pre">hh:mm'</span></code> and must be enclosed in single quotes. They are typically the first model file manager to be specified.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">controlVersion</span></code>
+: Version of the file manager that should be used to process the master configuration file. At this time, this string should be equal to ‘SUMMA_FILE_MANAGER_V3.0’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">simStartTime</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">simEndTime</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tmZoneInfo</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">settingsPath</span></code>: Base path for the configuration files. Most of the file paths in the remainder of the master configuration file are relative to this path (except INPUT_PATH and OUTPUT_PATH).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forcingPath</span></code>: Base path for the meteorological forcing files specified in the FORCING_FILELIST.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outputPath</span></code>: Base path for the SUMMA output files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">decisionsFile</span></code>: File path for the model decisions file (relative to settings_path).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outputControlFile</span></code>: File path for the output control file (relative to settings_path).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">globalHruParamFile</span></code>: File path for the local parameters file (relative to settings_path).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">globalGruParamFile</span></code>: File path for the basin parameters file (relative to settings_path)’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeFile</span></code>: File path for the local attributes file (relative to settings_path).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trialParamFile</span></code>: File path for the trial parameters file (relative to settings_path).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forcingListFile</span></code>: File path for the list of forcing files file (relative to settings_path).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initConditionFile</span></code>: File path for the initial conditions file (relative to settings_path).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outFilePrefix</span></code>: Text string prepended to each output filename to identify a specific model setup. Note that the user can further modify the output file name at run-time by using the -s|–suffix command-line option.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vegTableFile</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">soilTableFile</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">generalTableFile</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noahmpTableFile</span></code>:</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pysumma</span> <span class="kn">import</span> <span class="n">hydroshare_utils</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># Download SUMMA Model Instance from HydroShare</span>
+<span class="n">resource_id</span> <span class="o">=</span> <span class="s1">&#39;13d6b84a9553410297a67fa366a56cb2&#39;</span>
+<span class="n">instance</span> <span class="o">=</span> <span class="n">hydroshare_utils</span><span class="o">.</span><span class="n">get_hs_resource</span><span class="p">(</span><span class="n">resource_id</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">25</span><span class="n">da1dd0dc7d</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Download SUMMA Model Instance from HydroShare</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">resource_id</span> <span class="o">=</span> <span class="s1">&#39;13d6b84a9553410297a67fa366a56cb2&#39;</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">instance</span> <span class="o">=</span> <span class="n">hydroshare_utils</span><span class="o">.</span><span class="n">get_hs_resource</span><span class="p">(</span><span class="n">resource_id</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+
+<span class="nn">~/anaconda3/envs/pysumma/lib/python3.8/site-packages/pysumma/hydroshare_utils.py</span> in <span class="ni">get_hs_resource</span><span class="nt">(resource_id, file_path)</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="c1"># download SUMMA TestCase from HydroShare</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="k">def</span> <span class="nf">get_hs_resource</span><span class="p">(</span><span class="n">resource_id</span><span class="p">,</span> <span class="n">file_path</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">23</span>     <span class="n">hs</span> <span class="o">=</span> <span class="n">HydroShare</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="n">hs</span><span class="o">.</span><span class="n">getResource</span><span class="p">(</span><span class="n">resource_id</span><span class="p">,</span> <span class="n">destination</span><span class="o">=</span><span class="n">file_path</span><span class="p">,</span> <span class="n">unzip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span> 
+
+<span class="nn">~/anaconda3/envs/pysumma/lib/python3.8/site-packages/hs_restclient/__init__.py</span> in <span class="ni">__init__</span><span class="nt">(self, hostname, port, use_https, verify, auth, prompt_auth)</span>
+<span class="g g-Whitespace">     </span><span class="mi">77</span>         <span class="k">elif</span> <span class="n">prompt_auth</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">78</span>             <span class="kn">import</span> <span class="nn">getpass</span>
+<span class="ne">---&gt; </span><span class="mi">79</span>             <span class="n">username</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Username: &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">80</span>             <span class="n">password</span> <span class="o">=</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getpass</span><span class="p">(</span><span class="s2">&quot;Password for </span><span class="si">{}</span><span class="s2">: &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">81</span>             <span class="n">auth</span> <span class="o">=</span> <span class="n">HydroShareAuthBasic</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">)</span>
+
+<span class="nn">~/anaconda3/envs/pysumma/lib/python3.8/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">    </span><span class="mi">855</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">856</span><span class="s2">         if not self._allow_stdin:</span>
+<span class="ne">--&gt; </span><span class="mi">857</span><span class="s2">             raise StdinNotImplementedError(</span>
+<span class="g g-Whitespace">    </span><span class="mi">858</span><span class="s2">                 &quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">859</span><span class="s2">             )</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="nb">cd</span> <span class="o">{</span>instance<span class="o">}</span>/<span class="p">;</span> chmod +x ./installTestCases_local.sh
+<span class="o">!</span><span class="nb">cd</span> <span class="o">{</span>instance<span class="o">}</span>/<span class="p">;</span> ./installTestCases_local.sh
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TestCases installed
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="import-pysumma-3-0-0">
+<h2>1. Import pySUMMA 3.0.0<a class="headerlink" href="#import-pysumma-3-0-0" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pysumma</span> <span class="k">as</span> <span class="nn">ps</span>
+<span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-simulatioin-object">
+<h2>2. Create Simulatioin Object<a class="headerlink" href="#create-simulatioin-object" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">instance</span> <span class="o">=</span> <span class="s1">&#39;SummaModel_ReynoldsAspenStand_StomatalResistance&#39;</span>
+<span class="n">executable</span> <span class="o">=</span> <span class="s2">&quot;/usr/bin/summa.exe&quot;</span>
+<span class="n">file_manager</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">instance</span><span class="p">,</span> <span class="s1">&#39;settings/summa_fileManager_riparianAspenSimpleResistance.txt&#39;</span><span class="p">)</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">ps</span><span class="o">.</span><span class="n">Simulation</span><span class="p">(</span><span class="n">executable</span><span class="p">,</span> <span class="n">file_manager</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="explore-file-manager">
+<h2>3. Explore file manager<a class="headerlink" href="#explore-file-manager" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="show-file-manager-using-orginal-contents-attribute">
+<h3>3.1 Show file manager using <code class="docutils literal notranslate"><span class="pre">orginal_contents</span></code> attribute<a class="headerlink" href="#show-file-manager-using-orginal-contents-attribute" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="o">.</span><span class="n">original_contents</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&quot;controlVersion       &#39;SUMMA_FILE_MANAGER_V3.0.0&#39; !  fman_ver\n&quot;,
+ &quot;simStartTime         &#39;2006-07-01 00:00&#39; ! \n&quot;,
+ &quot;simEndTime           &#39;2007-09-30 00:00&#39; ! \n&quot;,
+ &quot;tmZoneInfo           &#39;localTime&#39; ! \n&quot;,
+ &quot;settingsPath         &#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/settings/&#39; !  setting_path\n&quot;,
+ &quot;forcingPath          &#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/data/forcingData/&#39; !  input_path\n&quot;,
+ &quot;outputPath           &#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/output/&#39; !  output_path\n&quot;,
+ &quot;decisionsFile        &#39;summa_zDecisions_riparianAspenSimpleResistance.txt&#39; !  decision\n&quot;,
+ &quot;outputControlFile    &#39;meta/Model_Output.txt&#39; !  OUTPUT_CONTROL\n&quot;,
+ &quot;globalHruParamFile   &#39;summa_zLocalParamInfo.txt&#39; !  local_par\n&quot;,
+ &quot;globalGruParamFile   &#39;summa_zBasinParamInfo.txt&#39; !  basin_par\n&quot;,
+ &quot;attributeFile        &#39;summa_zLocalAttributes_riparianAspen.nc&#39; !  local_attr\n&quot;,
+ &quot;trialParamFile       &#39;summa_zParamTrial_riparianAspen.nc&#39; !  para_trial\n&quot;,
+ &quot;forcingListFile      &#39;summa_zForcingFileList_riparianAspen.txt&#39; !  forcing_list\n&quot;,
+ &quot;initConditionFile    &#39;summa_zInitialCond.nc&#39; !  initial_cond\n&quot;,
+ &quot;outFilePrefix        &#39;vegImpactsTranspire&#39; !  output_prefix\n&quot;,
+ &quot;vegTableFile         &#39;VEGPARM.TBL&#39; ! \n&quot;,
+ &quot;soilTableFile        &#39;SOILPARM.TBL&#39; ! \n&quot;,
+ &quot;generalTableFile     &#39;GENPARM.TBL&#39; ! \n&quot;,
+ &quot;noahmpTableFile      &#39;MPTABLE.TBL&#39; ! \n&quot;,
+ &#39;! history Mon Jul 20 16:08:15 2020: /pool0/home/andrbenn/data/summa_3/utils/convert_summa_config_v2_v3.py ./wrrPaperTestCases/figure07/summa_fileManager_riparianAspenSimpleResistance.txt\n&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="show-file-manager-using-print-command">
+<h3>3.2 Show file manager using <code class="docutils literal notranslate"><span class="pre">print</span></code> command<a class="headerlink" href="#show-file-manager-using-print-command" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>controlVersion                       &#39;SUMMA_FILE_MANAGER_V3.0.0&#39;
+simStartTime                         &#39;2006-07-01 00:00&#39;
+simEndTime                           &#39;2007-09-30 00:00&#39;
+tmZoneInfo                           &#39;localTime&#39;
+settingsPath                         &#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/settings/&#39;
+forcingPath                          &#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/data/forcingData/&#39;
+outputPath                           &#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/output/&#39;
+decisionsFile                        &#39;summa_zDecisions_riparianAspenSimpleResistance.txt&#39;
+outputControlFile                    &#39;meta/Model_Output.txt&#39;
+globalHruParamFile                   &#39;summa_zLocalParamInfo.txt&#39;
+globalGruParamFile                   &#39;summa_zBasinParamInfo.txt&#39;
+attributeFile                        &#39;summa_zLocalAttributes_riparianAspen.nc&#39;
+trialParamFile                       &#39;summa_zParamTrial_riparianAspen.nc&#39;
+forcingListFile                      &#39;summa_zForcingFileList_riparianAspen.txt&#39;
+initConditionFile                    &#39;summa_zInitialCond.nc&#39;
+outFilePrefix                        &#39;vegImpactsTranspire&#39;
+vegTableFile                         &#39;VEGPARM.TBL&#39;
+soilTableFile                        &#39;SOILPARM.TBL&#39;
+generalTableFile                     &#39;GENPARM.TBL&#39;
+noahmpTableFile                      &#39;MPTABLE.TBL&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="get-value-of-each-line-in-file-manager">
+<h3>3.3 Get value of each line in file manager<a class="headerlink" href="#get-value-of-each-line-in-file-manager" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="p">[</span><span class="s1">&#39;settingsPath&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/settings/&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="p">[</span><span class="s1">&#39;forcingPath&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/data/forcingData/&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="p">[</span><span class="s1">&#39;attributeFile&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;summa_zLocalAttributes_riparianAspen.nc&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="change-the-value-of-each-line-in-file-manager">
+<h3>3.4 Change the value of each line in file manager<a class="headerlink" href="#change-the-value-of-each-line-in-file-manager" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># show the current value of simStartTime</span>
+<span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="p">[</span><span class="s1">&#39;simStartTime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;2006-07-01 00:00&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set different value of simStartTime</span>
+<span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="p">[</span><span class="s1">&#39;simStartTime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;[notUsed]&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="p">[</span><span class="s1">&#39;simStartTime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;[notUsed]&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># another way to set different value of simStartTime</span>
+<span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="p">[</span><span class="s1">&#39;simStartTime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;2006-07-01 00:00&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="p">[</span><span class="s1">&#39;simStartTime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;2006-07-01 00:00&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># overwirte the current value of meta_time in file manger</span>
+<span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="o">.</span><span class="n">write</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check the changed value of meta_time in file manger</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>controlVersion                       &#39;SUMMA_FILE_MANAGER_V3.0.0&#39;
+simStartTime                         &#39;2006-07-01 00:00&#39;
+simEndTime                           &#39;2007-09-30 00:00&#39;
+tmZoneInfo                           &#39;localTime&#39;
+settingsPath                         &#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/settings/&#39;
+forcingPath                          &#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/data/forcingData/&#39;
+outputPath                           &#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/output/&#39;
+decisionsFile                        &#39;summa_zDecisions_riparianAspenSimpleResistance.txt&#39;
+outputControlFile                    &#39;meta/Model_Output.txt&#39;
+globalHruParamFile                   &#39;summa_zLocalParamInfo.txt&#39;
+globalGruParamFile                   &#39;summa_zBasinParamInfo.txt&#39;
+attributeFile                        &#39;summa_zLocalAttributes_riparianAspen.nc&#39;
+trialParamFile                       &#39;summa_zParamTrial_riparianAspen.nc&#39;
+forcingListFile                      &#39;summa_zForcingFileList_riparianAspen.txt&#39;
+initConditionFile                    &#39;summa_zInitialCond.nc&#39;
+outFilePrefix                        &#39;vegImpactsTranspire&#39;
+vegTableFile                         &#39;VEGPARM.TBL&#39;
+soilTableFile                        &#39;SOILPARM.TBL&#39;
+generalTableFile                     &#39;GENPARM.TBL&#39;
+noahmpTableFile                      &#39;MPTABLE.TBL&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="look-at-other-configuration-files-using-manager-modules">
+<h3>3.5 Look at other configuration files using manager modules<a class="headerlink" href="#look-at-other-configuration-files-using-manager-modules" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read decision text file</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">decisions</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>soilCatTbl    ROSETTA              ! soil-category dataset
+vegeParTbl    USGS                 ! vegetation-category dataset
+soilStress    NoahType             ! choice of function for the soil moisture control on stomatal resistance
+stomResist    simpleResistance     ! choice of function for stomatal resistance
+num_method    itertive             ! choice of numerical method
+fDerivMeth    analytic             ! choice of method to calculate flux derivatives
+LAI_method    specified            ! choice of method to determine LAI and SAI
+f_Richards    mixdform             ! form of Richards equation
+groundwatr    noXplict             ! choice of groundwater parameterization
+hc_profile    constant             ! choice of hydraulic conductivity profile
+bcUpprTdyn    nrg_flux             ! type of upper boundary condition for thermodynamics
+bcLowrTdyn    zeroFlux             ! type of lower boundary condition for thermodynamics
+bcUpprSoiH    liq_flux             ! type of upper boundary condition for soil hydrology
+bcLowrSoiH    drainage             ! type of lower boundary condition for soil hydrology
+veg_traits    CM_QJRMS1988         ! choice of parameterization for vegetation roughness length and displacement height
+canopyEmis    difTrans             ! choice of parameterization for canopy emissivity
+snowIncept    lightSnow            ! choice of parameterization for snow interception
+windPrfile    logBelowCanopy       ! choice of canopy wind profile
+astability    louisinv             ! choice of stability function
+canopySrad    BeersLaw             ! choice of method for canopy shortwave radiation
+alb_method    varDecay             ! choice of albedo representation
+compaction    anderson             ! choice of compaction routine
+snowLayers    CLM_2010             ! choice of method to combine and sub-divide snow layers
+thCondSnow    jrdn1991             ! choice of thermal conductivity representation for snow
+thCondSoil    mixConstit           ! choice of thermal conductivity representation for soil
+spatial_gw    localColumn          ! choice of method for spatial representation of groundwater
+subRouting    timeDlay             ! choice of method for sub-grid routing
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read output control text file</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">output_control</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nSnow                                | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+nSoil                                | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+pptrate                              | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+airtemp                              | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+scalarRainPlusMelt                   | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+scalarSWE                            | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+scalarThroughfallSnow                | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+scalarThroughfallRain                | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+scalarSnowSublimation                | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+scalarInfiltration                   | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+scalarExfiltration                   | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+scalarSurfaceRunoff                  | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+scalarSurfaceTemp                    | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+scalarSenHeatTotal                   | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+scalarLatHeatTotal                   | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+scalarCanopyTranspiration            | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+scalarCanopyEvaporation              | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+scalarGroundEvaporation              | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+iLayerHeight                         | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+iLayerLiqFluxSoil                    | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+mLayerTemp                           | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+mLayerDepth                          | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+mLayerLiqFluxSoil                    | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+mLayerVolFracIce                     | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+mLayerVolFracLiq                     | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+mLayerVolFracWat                     | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+mLayerMatricHead                     | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+basin__SurfaceRunoff                 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+basin__ColumnOutflow                 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+basin__AquiferStorage                | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+basin__AquiferRecharge               | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+basin__AquiferBaseflow               | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+basin__AquiferTranspire              | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+averageInstantRunoff                 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+averageRoutedRunoff                  | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read local param info text file</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">global_hru_params</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>upperBoundHead            |      -7.5d-1 |      -1.0d+2 |      -1.0d-2
+lowerBoundHead            |       0.0000 |      -1.0d+2 |      -1.0d-2
+upperBoundTheta           |       0.2004 |       0.1020 |       0.3680
+lowerBoundTheta           |       0.1100 |       0.1020 |       0.3680
+upperBoundTemp            |     272.1600 |     270.1600 |     280.1600
+lowerBoundTemp            |     274.1600 |     270.1600 |     280.1600
+tempCritRain              |     273.1600 |     272.1600 |     274.1600
+tempRangeTimestep         |       2.0000 |       0.5000 |       5.0000
+frozenPrecipMultip        |       1.0000 |       0.5000 |       1.5000
+snowfrz_scale             |      50.0000 |      10.0000 |    1000.0000
+fixedThermalCond_snow     |       0.3500 |       0.1000 |       1.0000
+albedoMax                 |       0.8400 |       0.7000 |       0.9500
+albedoMinWinter           |       0.5500 |       0.6000 |       1.0000
+albedoMinSpring           |       0.5500 |       0.3000 |       1.0000
+albedoMaxVisible          |       0.9500 |       0.7000 |       0.9500
+albedoMinVisible          |       0.7500 |       0.5000 |       0.7500
+albedoMaxNearIR           |       0.6500 |       0.5000 |       0.7500
+albedoMinNearIR           |       0.3000 |       0.1500 |       0.4500
+albedoDecayRate           |       1.0d+6 |       1.0d+5 |       5.0d+6
+albedoSootLoad            |       0.3000 |       0.1000 |       0.5000
+albedoRefresh             |       1.0000 |       1.0000 |      10.0000
+radExt_snow               |      20.0000 |      20.0000 |      20.0000
+directScale               |       0.0900 |       0.0000 |       0.5000
+Frad_direct               |       0.7000 |       0.0000 |       1.0000
+Frad_vis                  |       0.5000 |       0.0000 |       1.0000
+newSnowDenMin             |     100.0000 |      50.0000 |     100.0000
+newSnowDenMult            |     100.0000 |      25.0000 |      75.0000
+newSnowDenScal            |       5.0000 |       1.0000 |       5.0000
+constSnowDen              |     100.0000 |      50.0000 |     250.0000
+newSnowDenAdd             |     109.0000 |      80.0000 |     120.0000
+newSnowDenMultTemp        |       6.0000 |       1.0000 |      12.0000
+newSnowDenMultWind        |      26.0000 |      16.0000 |      36.0000
+newSnowDenMultAnd         |       1.0000 |       1.0000 |       3.0000
+newSnowDenBase            |       0.0000 |       0.0000 |       0.0000
+densScalGrowth            |       0.0460 |       0.0230 |       0.0920
+tempScalGrowth            |       0.0400 |       0.0200 |       0.0600
+grainGrowthRate           |       2.7d-6 |       1.0d-6 |       5.0d-6
+densScalOvrbdn            |       0.0230 |       0.0115 |       0.0460
+tempScalOvrbdn            |       0.0800 |       0.6000 |       1.0000
+baseViscosity             |       9.0d+5 |       5.0d+5 |       1.5d+6
+Fcapil                    |       0.0600 |       0.0100 |       0.1000
+k_snow                    |       0.0150 |       0.0050 |       0.0500
+mw_exp                    |       3.0000 |       1.0000 |       5.0000
+z0Snow                    |       0.0010 |       0.0010 |      10.0000
+z0Soil                    |       0.0100 |       0.0010 |      10.0000
+z0Canopy                  |       0.1000 |       0.0010 |      10.0000
+zpdFraction               |       0.6500 |       0.5000 |       0.8500
+critRichNumber            |       0.2000 |       0.1000 |       1.0000
+Louis79_bparam            |       9.4000 |       9.2000 |       9.6000
+Louis79_cStar             |       5.3000 |       5.1000 |       5.5000
+Mahrt87_eScale            |       1.0000 |       0.5000 |       2.0000
+leafExchangeCoeff         |       0.0100 |       0.0010 |       0.1000
+windReductionParam        |       0.2800 |       0.0000 |       1.0000
+Kc25                      |     296.0770 |     296.0770 |     296.0770
+Ko25                      |       0.2961 |       0.2961 |       0.2961
+Kc_qFac                   |       2.1000 |       2.1000 |       2.1000
+Ko_qFac                   |       1.2000 |       1.2000 |       1.2000
+kc_Ha                     |       7.9d+4 |       7.9d+4 |       7.9d+4
+ko_Ha                     |       3.6d+4 |       3.6d+4 |       3.6d+4
+vcmax25_canopyTop         |      40.0000 |      20.0000 |     100.0000
+vcmax_qFac                |       2.4000 |       2.4000 |       2.4000
+vcmax_Ha                  |       6.5d+4 |       6.5d+4 |       6.5d+4
+vcmax_Hd                  |       2.2d+5 |       1.5d+5 |       1.5d+5
+vcmax_Sv                  |     710.0000 |     485.0000 |     485.0000
+vcmax_Kn                  |       0.6000 |       0.0000 |       1.2000
+jmax25_scale              |       2.0000 |       2.0000 |       2.0000
+jmax_Ha                   |       4.4d+4 |       4.4d+4 |       4.4d+4
+jmax_Hd                   |       1.5d+5 |       1.5d+5 |       1.5d+5
+jmax_Sv                   |     495.0000 |     495.0000 |     495.0000
+fractionJ                 |       0.1500 |       0.1500 |       0.1500
+quantamYield              |       0.0500 |       0.0500 |       0.0500
+vpScaleFactor             |    1500.0000 |    1500.0000 |    1500.0000
+cond2photo_slope          |       9.0000 |       1.0000 |      10.0000
+minStomatalConductance    |    2000.0000 |    2000.0000 |    2000.0000
+winterSAI                 |       1.0000 |       0.0100 |       3.0000
+summerLAI                 |       3.0000 |       0.0100 |      10.0000
+rootScaleFactor1          |       2.0000 |       1.0000 |      10.0000
+rootScaleFactor2          |       5.0000 |       1.0000 |      10.0000
+rootingDepth              |       2.0000 |       0.0100 |      10.0000
+rootDistExp               |       1.0000 |       0.0100 |       1.0000
+plantWiltPsi              |      -1.5d+2 |      -5.0d+2 |       0.0000
+soilStressParam           |       5.8000 |       4.3600 |       6.3700
+critSoilWilting           |       0.0750 |       0.0000 |       1.0000
+critSoilTranspire         |       0.1750 |       0.0000 |       1.0000
+critAquiferTranspire      |       0.2000 |       0.1000 |      10.0000
+minStomatalResistance     |      50.0000 |      10.0000 |     200.0000
+leafDimension             |       0.0400 |       0.0100 |       0.1000
+heightCanopyTop           |      20.0000 |       0.0500 |     100.0000
+heightCanopyBottom        |       2.0000 |       0.0000 |       5.0000
+specificHeatVeg           |     874.0000 |     500.0000 |    1500.0000
+maxMassVegetation         |      25.0000 |       1.0000 |      50.0000
+throughfallScaleSnow      |       0.5000 |       0.1000 |       0.9000
+throughfallScaleRain      |       0.5000 |       0.1000 |       0.9000
+refInterceptCapSnow       |       6.6000 |       1.0000 |      10.0000
+refInterceptCapRain       |       1.0000 |       0.0100 |       1.0000
+snowUnloadingCoeff        |       0.0000 |       0.0000 |       1.5d-6
+canopyDrainageCoeff       |       0.0050 |       0.0010 |       0.0100
+ratioDrip2Unloading       |       0.4000 |       0.0000 |       1.0000
+canopyWettingFactor       |       0.7000 |       0.0000 |       1.0000
+canopyWettingExp          |       1.0000 |       0.0000 |       1.0000
+soil_dens_intr            |    2700.0000 |     500.0000 |    4000.0000
+thCond_soil               |       5.5000 |       2.9000 |       8.4000
+frac_sand                 |       0.1600 |       0.0000 |       1.0000
+frac_silt                 |       0.2800 |       0.0000 |       1.0000
+frac_clay                 |       0.5600 |       0.0000 |       1.0000
+fieldCapacity             |       0.2000 |       0.0000 |       1.0000
+wettingFrontSuction       |       0.3000 |       0.1000 |       1.5000
+theta_mp                  |       0.4010 |       0.3000 |       0.6000
+theta_sat                 |       0.5500 |       0.3000 |       0.6000
+theta_res                 |       0.1390 |       0.0010 |       0.1000
+vGn_alpha                 |      -8.4d-1 |      -1.0d+0 |      -1.0d-2
+vGn_n                     |       1.3000 |       1.0000 |       3.0000
+mpExp                     |       5.0000 |       1.0000 |      10.0000
+k_soil                    |       7.5d-6 |       1.0d-7 |       1.0d-5
+k_macropore               |       0.0010 |       1.0d-7 |       1.0d-5
+kAnisotropic              |       1.0000 |       0.0001 |      10.0000
+zScale_TOPMODEL           |       2.5000 |       0.1000 |     100.0000
+compactedDepth            |       1.0000 |       0.0000 |       1.0000
+aquiferScaleFactor        |       0.3500 |       0.1000 |     100.0000
+aquiferBaseflowExp        |       2.0000 |       1.0000 |      10.0000
+aquiferBaseflowRate       |       2.0000 |       1.0000 |      10.0000
+qSurfScale                |      50.0000 |       1.0000 |     100.0000
+specificYield             |       0.2000 |       0.1000 |       0.3000
+specificStorage           |       1.0d-9 |       1.0d-5 |       1.0d-7
+f_impede                  |       2.0000 |       1.0000 |      10.0000
+soilIceScale              |       0.1300 |       0.0001 |       1.0000
+soilIceCV                 |       0.4500 |       0.1000 |       5.0000
+minwind                   |       0.1000 |       0.0010 |       1.0000
+minstep                   |       1.0000 |       1.0000 |    1800.0000
+maxstep                   |    3600.0000 |      60.0000 |    1800.0000
+wimplicit                 |       0.0000 |       0.0000 |       1.0000
+maxiter                   |     100.0000 |       1.0000 |     100.0000
+relConvTol_liquid         |       0.0010 |       1.0d-5 |       0.1000
+absConvTol_liquid         |       1.0d-6 |       1.0d-8 |       0.0010
+relConvTol_matric         |       1.0d-6 |       1.0d-5 |       0.1000
+absConvTol_matric         |       1.0d-6 |       1.0d-8 |       0.0010
+relConvTol_energy         |       0.0100 |       1.0d-5 |       0.1000
+absConvTol_energy         |       1.0000 |       0.0100 |      10.0000
+relConvTol_aquifr         |       1.0000 |       0.0100 |      10.0000
+absConvTol_aquifr         |       1.0d-5 |       1.0d-5 |       0.1000
+zmin                      |       0.0100 |       0.0050 |       0.1000
+zmax                      |       0.0500 |       0.0100 |       0.5000
+zminLayer1                |       0.0075 |       0.0075 |       0.0075
+zminLayer2                |       0.0100 |       0.0100 |       0.0100
+zminLayer3                |       0.0500 |       0.0500 |       0.0500
+zminLayer4                |       0.1000 |       0.1000 |       0.1000
+zminLayer5                |       0.2500 |       0.2500 |       0.2500
+zmaxLayer1_lower          |       0.0500 |       0.0500 |       0.0500
+zmaxLayer2_lower          |       0.2000 |       0.2000 |       0.2000
+zmaxLayer3_lower          |       0.5000 |       0.5000 |       0.5000
+zmaxLayer4_lower          |       1.0000 |       1.0000 |       1.0000
+zmaxLayer1_upper          |       0.0300 |       0.0300 |       0.0300
+zmaxLayer2_upper          |       0.1500 |       0.1500 |       0.1500
+zmaxLayer3_upper          |       0.3000 |       0.3000 |       0.3000
+zmaxLayer4_upper          |       0.7500 |       0.7500 |       0.7500
+minTempUnloading          |     270.1600 |     260.1600 |     273.1600
+minWindUnloading          |       0.0000 |       0.0000 |      10.0000
+rateTempUnloading         |       1.9d+5 |       1.0d+5 |       3.0d+5
+rateWindUnloading         |       1.6d+5 |       1.0d+5 |       3.0d+5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read basin param info text file</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">global_gru_params</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>basin__aquiferHydCond     |       0.0100 |       0.0001 |      10.0000
+basin__aquiferScaleFactor |       3.5000 |       0.1000 |     100.0000
+basin__aquiferBaseflowExp |       5.0000 |       1.0000 |      10.0000
+routingGammaShape         |       2.5000 |       2.0000 |       3.0000
+routingGammaScale         |       2.0d+4 |       1.0000 |       5.0d+6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read forcing file list</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">force_file_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;forcing_above_aspen.nc&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read local attributes netCDF file</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">local_attributes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.Dataset&gt;
+Dimensions:         (gru: 1, hru: 1)
+Dimensions without coordinates: gru, hru
+Data variables:
+    hru2gruId       (hru) int32 1001
+    downHRUindex    (hru) int32 0
+    slopeTypeIndex  (hru) int32 1
+    soilTypeIndex   (hru) int32 8
+    vegTypeIndex    (hru) int32 11
+    mHeight         (hru) float64 19.25
+    contourLength   (hru) float64 180.8
+    tan_slope       (hru) float64 0.2083
+    elevation       (hru) float64 2.097e+03
+    longitude       (hru) float64 243.2
+    latitude        (hru) float64 43.2
+    HRUarea         (hru) float64 3.27e+04
+    hruId           (hru) int32 1001
+    gruId           (gru) int32 1001
+Attributes:
+    datasource:  *zLocalAttributes*
+    history:     Tue Sep 27 21:51:50 2016: ncrename -d nhru,hru -d ngru,gru ....
+    NCO:         &quot;4.6.0&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read parameter trial netCDF file</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">trial_params</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.Dataset&gt;
+Dimensions:             (hru: 1)
+Dimensions without coordinates: hru
+Data variables:
+    hruIndex            (hru) float64 1.001e+03
+    frozenPrecipMultip  (hru) float64 1.0
+    theta_mp            (hru) float64 0.2211
+    theta_sat           (hru) float64 0.4792
+    theta_res           (hru) float64 0.1
+    vGn_alpha           (hru) float64 -0.858
+    vGn_n               (hru) float64 1.306
+    f_impede            (hru) float64 0.0
+    k_soil              (hru) float64 3.53e-06
+    k_macropore         (hru) float64 0.06255
+    critSoilWilting     (hru) float64 0.125
+    critSoilTranspire   (hru) float64 0.2
+    winterSAI           (hru) float64 0.45
+    summerLAI           (hru) float64 2.5
+    heightCanopyTop     (hru) float64 9.5
+    heightCanopyBottom  (hru) float64 3.0
+    kAnisotropic        (hru) float64 1.0
+    rootDistExp         (hru) float64 1.0
+    zScale_TOPMODEL     (hru) float64 4.057
+    qSurfScale          (hru) float64 84.06
+Attributes:
+    history:  Converted to NetCDF using &quot;/Users/nijssen/Dropbox/data/PLUMBER/...
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read parameter trial netCDF file</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">initial_conditions</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.Dataset&gt;
+Dimensions:               (hru: 1, ifcToto: 9, midSoil: 8, midToto: 8, scalarv: 1)
+Dimensions without coordinates: hru, ifcToto, midSoil, midToto, scalarv
+Data variables:
+    mLayerVolFracIce      (midToto, hru) float64 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+    scalarCanairTemp      (scalarv, hru) float64 286.0
+    nSnow                 (scalarv, hru) int64 0
+    iLayerHeight          (ifcToto, hru) float64 0.0 0.025 0.1 ... 1.5 2.5 4.0
+    mLayerMatricHead      (midSoil, hru) float64 -100.0 -100.0 ... -100.0 -100.0
+    scalarSnowAlbedo      (scalarv, hru) float64 0.82
+    dt_init               (scalarv, hru) float64 360.0
+    mLayerTemp            (midToto, hru) float64 288.5 288.5 ... 288.5 288.5
+    scalarSfcMeltPond     (scalarv, hru) float64 0.0
+    scalarCanopyTemp      (scalarv, hru) float64 290.0
+    scalarSnowDepth       (scalarv, hru) float64 0.0
+    nSoil                 (scalarv, hru) int64 8
+    scalarSWE             (scalarv, hru) float64 0.0
+    scalarCanopyLiq       (scalarv, hru) float64 3.16
+    mLayerVolFracLiq      (midToto, hru) float64 0.29 0.29 0.29 ... 0.29 0.29
+    mLayerDepth           (midToto, hru) float64 0.025 0.075 0.15 ... 1.0 1.5
+    scalarCanopyIce       (scalarv, hru) float64 0.0
+    scalarAquiferStorage  (scalarv, hru) float64 0.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">genparm</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">genparm</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">genparm</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>General Parameters
+SLOPE_DATA
+9
+0.1 
+0.6
+1.0
+0.35
+0.55
+0.8
+0.63
+0.0
+0.0
+SBETA_DATA
+-2.0
+FXEXP_DATA
+2.0
+CSOIL_DATA
+2.00E+6
+SALP_DATA
+2.6
+REFDK_DATA
+2.0E-6
+REFKDT_DATA
+3.0
+FRZK_DATA
+0.15
+ZBOT_DATA
+-8.0
+CZIL_DATA
+0.1
+SMLOW_DATA
+0.5
+SMHIGH_DATA
+3.0
+LVCOEF_DATA
+0.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">mptable</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">mptable</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">mptable</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&amp;noah_mp_usgs_veg_categories
+ VEG_DATASET_DESCRIPTION = &quot;USGS&quot;
+ NVEG = 27
+/
+&amp;noah_mp_usgs_parameters
+ ! NVEG = 27
+ !  1: Urban and Built-Up Land
+ !  2: Dryland Cropland and Pasture
+ !  3: Irrigated Cropland and Pasture
+ !  4: Mixed Dryland/Irrigated Cropland and Pasture
+ !  5: Cropland/Grassland Mosaic
+ !  6: Cropland/Woodland Mosaic
+ !  7: Grassland
+ !  8: Shrubland
+ !  9: Mixed Shrubland/Grassland
+ ! 10: Savanna
+ ! 11: Deciduous Broadleaf Forest
+ ! 12: Deciduous Needleleaf Forest
+ ! 13: Evergreen Broadleaf Forest
+ ! 14: Evergreen Needleleaf Forest
+ ! 15: Mixed Forest
+ ! 16: Water Bodies
+ ! 17: Herbaceous Wetland
+ ! 18: Wooded Wetland
+ ! 19: Barren or Sparsely Vegetated
+ ! 20: Herbaceous Tundra
+ ! 21: Wooded Tundra
+ ! 22: Mixed Tundra
+ ! 23: Bare Ground Tundra
+ ! 24: Snow or Ice
+ ! 25: Playa
+ ! 26: Lava
+ ! 27: White Sand
+
+ ISURBAN   = 1
+ ISWATER   = 16
+ ISBARREN  = 19
+ ISSNOW    = 24
+ EBLFOREST = 13
+
+ !---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ !          1      2      3      4      5      6      7      8      9      10     11     12     13     14     15     16     17     18     19     20     21     22     23     24     25     26    27
+ !---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ CH2OP =   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,   0.1,
+ DLEAF =  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,  0.04,
+ Z0MVT =  1.00,  0.06,  0.06,  0.06,  0.06,  0.15,  0.06,  0.06,  0.06,  0.86,  0.80,  0.85,  1.10,  1.09,  0.80,  0.00,  0.06,  0.05,  0.00,  0.04,  0.06,  0.06,  0.03,  0.00,  0.01,  0.00,  0.00,
+ HVT   =  15.0,  0.50,  0.50,  0.50,  0.50,  1.25,  0.50,  0.50,  0.50,  16.0,  16.0,  18.0,  20.0,  20.0,  16.0,  0.00,  0.50,  0.80,  0.00,  0.50,  0.80,  0.80,  0.50,  0.00,  0.10,  0.00,  0.00,
+ HVB   =  1.00,  0.10,  0.10,  0.10,  0.10,  0.15,  0.05,  0.10,  0.10,  3.00,  3.50,  3.00,  4.00,  3.50,  3.00,  0.00,  0.05,  0.10,  0.00,  0.10,  0.10,  0.10,  0.10,  0.00,  0.10,  0.00,  0.00,
+ DEN   =  0.01,  25.0,  25.0,  25.0,  25.0,  25.0,  100.,  10.0,  10.0,  0.02,  0.10,  0.28,  0.02,  0.28,  0.10,  0.01,  10.0,  0.10,  0.01,  1.00,  1.00,  1.00,  1.00,  0.00,  0.01,  0.01,  0.01,
+ RC    =  1.00,  0.08,  0.08,  0.08,  0.08,  0.08,  0.03,  0.12,  0.12,  3.00,  1.40,  1.20,  3.60,  1.20,  1.40,  0.01,  0.10,  1.40,  0.01,  0.30,  0.30,  0.30,  0.30,  0.00,  0.01,  0.01,  0.01,
+
+ ! Row 1:  Vis
+ ! Row 2:  Near IR
+ RHOL  =  0.00,  0.11,  0.11,  0.11,  0.11,  0.11,  0.11,  0.07,  0.10,  0.10,  0.10,  0.07,  0.10,  0.07,  0.10,  0.00,  0.11,  0.10,  0.00,  0.10,  0.10,  0.10,  0.10,  0.00,  0.10,  0.00,  0.00,
+          0.00,  0.58,  0.58,  0.58,  0.58,  0.58,  0.58,  0.35,  0.45,  0.45,  0.45,  0.35,  0.45,  0.35,  0.45,  0.00,  0.58,  0.45,  0.00,  0.45,  0.45,  0.45,  0.45,  0.00,  0.45,  0.00,  0.00,
+
+ ! Row 1:  Vis
+ ! Row 2:  Near IR
+ RHOS  =  0.00,  0.36,  0.36,  0.36,  0.36,  0.36,  0.36,  0.16,  0.16,  0.16,  0.16,  0.16,  0.16,  0.16,  0.16,  0.00,  0.36,  0.16,  0.00,  0.16,  0.16,  0.16,  0.16,  0.00,  0.16,  0.00,  0.00,
+          0.00,  0.58,  0.58,  0.58,  0.58,  0.58,  0.58,  0.39,  0.39,  0.39,  0.39,  0.39,  0.39,  0.39,  0.39,  0.00,  0.58,  0.39,  0.00,  0.39,  0.39,  0.39,  0.39,  0.00,  0.39,  0.00,  0.00,
+
+ ! Row 1:  Vis
+ ! Row 2:  Near IR
+ TAUL  =  0.00,  0.07,  0.07,  0.07,  0.07,  0.07,  0.07,  0.05,  0.05,  0.05,  0.05,  0.05,  0.05,  0.05,  0.05,  0.00,  0.07,  0.05,  0.00,  0.05,  0.05,  0.05,  0.05,  0.00,  0.05,  0.00,  0.00,
+          0.00,  0.25,  0.25,  0.25,  0.25,  0.25,  0.25,  0.10,  0.10,  0.25,  0.25,  0.10,  0.25,  0.10,  0.25,  0.00,  0.25,  0.25,  0.00,  0.25,  0.25,  0.25,  0.25,  0.00,  0.25,  0.00,  0.00,
+
+ ! Row 1:  Vis
+ ! Row 2:  Near IR
+ TAUS  = 0.000, 0.220, 0.220, 0.220, 0.220, 0.220, 0.220, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.000, 0.220, 0.001, 0.000, 0.220, 0.001, 0.001, 0.001, 0.000, 0.001, 0.000, 0.000,
+         0.000, 0.380, 0.380, 0.380, 0.380, 0.380, 0.380, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.000, 0.380, 0.001, 0.000, 0.380, 0.001, 0.001, 0.001, 0.000, 0.001, 0.000, 0.000,
+
+ XL    = 0.000, -0.30, -0.30, -0.30, -0.30, -0.30, -0.30, 0.010, 0.250, 0.010, 0.250, 0.010, 0.010, 0.010, 0.250, 0.000, -0.30, 0.250, 0.000, -0.30, 0.250, 0.250, 0.250, 0.000, 0.250, 0.000, 0.000,
+ CWPVT =   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,   3.0,
+ C3PSN =   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,
+ KC25  =  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,  30.0,
+ AKC   =   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,   2.1,
+ KO25  =  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,  3.E4,
+ AKO   =   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,   1.2,
+ AVCMX =   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,   2.4,
+ AQE   =   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,   1.0,
+
+ LTOVRC=   0.0,   1.6,   1.8,   1.2,   1.2,  1.30,  0.50,  0.65,  0.70,  0.65,  0.55,   0.2,  0.55,   0.5,   0.5,   0.0,   1.4,   1.4,   0.0,   1.2,   1.3,   1.4,   1.0,   0.0,   1.0,   0.0,   0.0,
+ DILEFC=  0.00,  0.50,  0.50,  0.50,  0.35,  0.20,  0.20,  0.20,  0.50,  0.50,  0.60,  1.80,  0.50,  1.20,  0.80,  0.00,  0.40,  0.40,  0.00,  0.40,  0.30,  0.40,  0.30,  0.00,  0.30,  0.00,  0.00,
+ DILEFW=  0.00,  0.20,  0.20,  0.20,  0.20,  0.20,  0.10,  0.20,  0.20,  0.50,  0.20,  0.20,  4.00,  0.20,  0.20,  0.00,  0.20,  0.20,  0.00,  0.20,  0.20,  0.20,  0.20,  0.00,  0.20,  0.00,  0.00,
+ RMF25 =  0.00,  1.00,  1.40,  1.45,  1.45,  1.45,  1.80,  0.26,  0.26,  0.80,  3.00,  4.00,  0.65,  3.00,  3.00,  0.00,  3.20,  3.20,  0.00,  3.20,  3.00,  3.00,  3.00,  0.00,  3.00,  0.00,  0.00,
+ SLA   =    60,    80,    80,    80,    80,    80,    60,    60,    60,    50,    80,    80,    80,    80,    80,     0,    80,    80,     0,    80,    80,    80,    80,     0,    80,     0,     0,
+ FRAGR =  0.00,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.10,  0.20,  0.10,  0.10,  0.00,  0.10,  0.10,  0.10,  0.10,  0.10,  0.10,  0.10,  0.00,  0.10,  0.00,  0.00,
+ TMIN  =     0,   273,   273,   273,   273,   273,   273,   273,   273,   273,   273,   268,   273,   265,   268,     0,   268,   268,     0,   268,   268,   268,   268,     0,   268,     0,     0,
+ VCMX25=  0.00,  80.0,  80.0,  80.0,  60.0,  70.0,  40.0,  40.0,  40.0,  40.0,  60.0,  60.0,  60.0,  50.0,  55.0,  0.00,  50.0,  50.0,  0.00,  50.0,  50.0,  50.0,  50.0,  0.00,  50.0,  0.00,  0.00,
+ TDLEF =   278,   278,   278,   278,   278,   278,   278,   278,   278,   278,   278,   268,   278,   278,   268,     0,   268,   268,     0,   268,   268,   268,   268,     0,   268,     0,     0,
+ BP    = 1.E15,  2.E3,  2.E3,  2.E3,  2.E3,  2.E3,  2.E3,  2.E3,  2.E3,  2.E3,  2.E3,  2.E3,  2.E3,  2.E3,  2.E3, 1.E15,  2.E3,  2.E3,  2.E3,  2.E3,  2.E3,  2.E3,  2.E3, 1.E15,  2.E3, 1.E15, 1.E15,
+ MP    =    9.,    9.,    9.,    9.,    9.,    9.,    9.,    9.,    9.,    9.,    9.,    6.,    9.,    6.,    9.,    9.,    9.,    9.,    9.,    9.,    9.,    9.,    9.,    9.,    9.,    9.,    9.,
+ QE25  =    0.,  0.06,  0.06,  0.06,  0.06,  0.06,  0.06,  0.06,  0.06,  0.06,  0.06,  0.06,  0.06,  0.06,  0.06,  0.00,  0.06,  0.06,  0.06,  0.06,  0.06,  0.06,  0.06,  0.00,  0.06,  0.00,  0.00,
+ RMS25 =  0.00,  0.10,  0.10,  0.10,  0.10,  0.10,  0.10,  0.10,  0.10,  0.32,  0.10,  0.64,  0.30,  0.90,  0.80,  0.00,  0.10,  0.10,  0.00,  0.10,  0.10,  0.10,  0.00,  0.00,  0.00,  0.00,  0.00,
+ RMR25 =  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  1.20,  0.00,  0.00,  0.01,  0.01,  0.05,  0.05,  0.36,  0.03,  0.00,  0.00,  0.00,  0.00,  2.11,  2.11,  2.11,  0.00,  0.00,  0.00,  0.00,  0.00,
+ ARM   =   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,   2.0,
+ FOLNMX=  0.00,   1.5,   1.5,   1.5,   1.5,   1.5,   1.5,   1.5,   1.5,   1.5,   1.5,   1.5,   1.5,   1.5,   1.5,  0.00,   1.5,   1.5,   1.5,   1.5,   1.5,   1.5,   1.5,  0.00,   1.5,  0.00,  0.00,
+ WDPOOL=  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  1.00,  1.00,  1.00,  1.00,  1.00,  1.00,  1.00,  1.00,  0.00,  0.00,  1.00,  0.00,  0.00,  1.00,  1.00,  0.00,  0.00,  0.00,  0.00,  0.00,
+ WRRAT =  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  3.00,  3.00,  3.00,  30.0,  30.0,  30.0,  30.0,  30.0,  0.00,  0.00,  30.0,  0.00,  0.00,  3.00,  3.00,  0.00,  0.00,  0.00,  0.00,  0.00,
+ MRP   =  0.00,  0.23,  0.23,  0.23,  0.23,  0.23,  0.17,  0.19,  0.19,  0.40,  0.40,  0.37,  0.23,  0.37,  0.30,  0.00,  0.17,  0.40,  0.00,  0.17,  0.23,  0.20,  0.00,  0.00,  0.20,  0.00,  0.00,
+
+! Monthly values, one row for each month:
+ SAIM  =   0.0,   0.0,   0.0,   0.0,   0.0,   0.1,   0.3,   0.1,   0.2,   0.1,   0.4,   0.3,   0.5,   0.4,   0.2,   0.0,   0.1,   0.1,   0.0,   0.1,   0.1,   0.1,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   0.0,   0.0,   0.0,   0.0,   0.1,   0.3,   0.1,   0.2,   0.1,   0.4,   0.3,   0.5,   0.4,   0.2,   0.0,   0.1,   0.1,   0.0,   0.1,   0.1,   0.1,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   0.0,   0.0,   0.0,   0.0,   0.1,   0.3,   0.1,   0.2,   0.1,   0.4,   0.3,   0.5,   0.4,   0.2,   0.0,   0.1,   0.1,   0.0,   0.1,   0.1,   0.1,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   0.0,   0.0,   0.0,   0.0,   0.1,   0.3,   0.1,   0.2,   0.1,   0.4,   0.4,   0.5,   0.3,   0.2,   0.0,   0.1,   0.1,   0.0,   0.1,   0.1,   0.1,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   0.0,   0.0,   0.0,   0.1,   0.2,   0.3,   0.1,   0.2,   0.1,   0.4,   0.4,   0.5,   0.4,   0.2,   0.0,   0.1,   0.1,   0.0,   0.1,   0.1,   0.1,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   0.0,   0.0,   0.0,   0.2,   0.2,   0.4,   0.2,   0.3,   0.1,   0.4,   0.7,   0.5,   0.5,   0.4,   0.0,   0.2,   0.2,   0.0,   0.2,   0.2,   0.2,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   0.0,   0.0,   0.0,   0.3,   0.3,   0.8,   0.2,   0.5,   0.1,   0.9,   1.3,   0.5,   0.5,   0.4,   0.0,   0.4,   0.4,   0.0,   0.2,   0.2,   0.2,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   0.0,   0.0,   0.0,   0.5,   0.2,   1.3,   0.1,   0.8,   0.1,   1.2,   1.2,   0.5,   0.6,   0.5,   0.0,   0.6,   0.6,   0.0,   0.3,   0.3,   0.3,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   0.0,   0.0,   0.0,   0.4,   0.1,   1.1,   0.1,   0.5,   0.1,   1.6,   1.0,   0.5,   0.6,   0.5,   0.0,   0.5,   0.5,   0.0,   0.3,   0.3,   0.3,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   0.0,   0.0,   0.0,   0.1,   0.1,   0.4,   0.1,   0.2,   0.1,   1.4,   0.8,   0.5,   0.7,   0.6,   0.0,   0.2,   0.2,   0.0,   0.2,   0.2,   0.2,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   0.0,   0.0,   0.0,   0.0,   0.1,   0.4,   0.1,   0.2,   0.1,   0.6,   0.6,   0.5,   0.6,   0.5,   0.0,   0.2,   0.2,   0.0,   0.2,   0.2,   0.2,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   0.0,   0.0,   0.0,   0.0,   0.1,   0.4,   0.1,   0.2,   0.1,   0.4,   0.5,   0.5,   0.5,   0.3,   0.0,   0.1,   0.1,   0.0,   0.1,   0.1,   0.1,   0.0,   0.0,   0.0,   0.0,   0.0,
+
+ LAIM  =   0.0,   0.0,   0.4,   0.4,   0.4,   0.0,   0.4,   1.0,   1.0,   1.0,   0.0,   0.0,   3.5,   1.6,   1.0,   0.0,   0.4,   0.2,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   0.0,   0.5,   0.5,   0.5,   0.0,   0.5,   1.0,   1.0,   1.0,   0.0,   0.0,   3.5,   1.6,   1.0,   0.0,   0.5,   0.4,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   0.0,   0.6,   0.6,   0.6,   0.0,   0.6,   1.0,   1.0,   1.0,   0.3,   0.0,   3.5,   1.6,   1.0,   0.0,   0.6,   0.4,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   0.0,   0.7,   0.7,   0.7,   0.5,   0.7,   1.0,   1.5,   1.0,   1.2,   0.6,   3.5,   1.6,   1.0,   0.0,   0.7,   0.4,   0.0,   0.2,   0.2,   0.2,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   1.0,   1.2,   1.2,   1.2,   1.5,   1.2,   1.0,   2.0,   1.0,   3.0,   1.2,   3.5,   5.3,   2.3,   0.0,   1.2,   0.5,   0.0,   0.5,   0.5,   0.5,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   2.0,   3.0,   3.0,   3.0,   2.5,   3.0,   1.0,   2.5,   1.0,   4.7,   2.0,   3.5,   5.5,   3.5,   0.0,   3.0,   0.7,   0.0,   1.0,   1.0,   1.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   3.0,   3.5,   3.5,   3.5,   3.5,   3.5,   1.0,   3.0,   1.0,   4.5,   2.6,   3.5,   5.3,   4.3,   0.0,   3.5,   1.7,   0.0,   2.0,   2.0,   2.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   3.0,   1.5,   1.5,   1.5,   3.5,   1.5,   1.0,   2.5,   1.0,   3.4,   1.7,   3.5,   5.3,   3.3,   0.0,   1.5,   3.0,   0.0,   1.0,   1.0,   1.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   1.5,   0.7,   0.7,   0.7,   2.0,   0.7,   1.0,   1.5,   1.0,   1.2,   1.0,   3.5,   4.2,   2.2,   0.0,   0.7,   2.5,   0.0,   0.5,   0.5,   0.5,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   0.0,   0.6,   0.6,   0.6,   1.0,   0.6,   1.0,   1.0,   1.0,   0.3,   0.5,   3.5,   2.2,   1.2,   0.0,   0.6,   1.6,   0.0,   0.2,   0.2,   0.2,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   0.0,   0.5,   0.5,   0.5,   0.0,   0.5,   1.0,   1.0,   1.0,   0.0,   0.2,   3.5,   2.2,   1.2,   0.0,   0.5,   0.8,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   0.0,   0.4,   0.4,   0.4,   0.0,   0.4,   1.0,   1.0,   1.0,   0.0,   0.0,   3.5,   2.2,   1.2,   0.0,   0.4,   0.4,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+
+ SLAREA=0.0228,0.0200,0.0200,0.0295,0.0223,0.0277,0.0060,0.0227,0.0188,0.0236,0.0258,0.0200,0.0200,0.0090,0.0223,0.0422,0.0390,  0.02,  0.02,  0.02,  0.02,  0.02,  0.02,  0.02,  0.02,  0.02,  0.02,
+
+! Five types, one row for each type.
+ EPS   = 41.87,  0.00,  0.00,  2.52,  0.04, 17.11,  0.02, 21.62,  0.11, 22.80, 46.86,  0.00,  0.00,  0.46, 30.98,  2.31,  1.63,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+          0.98,  0.00,  0.00,  0.16,  0.09,  0.28,  0.05,  0.92,  0.22,  0.59,  0.38,  0.00,  0.00,  3.34,  0.96,  1.47,  1.07,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+          1.82,  0.00,  0.00,  0.23,  0.05,  0.81,  0.03,  1.73,  1.26,  1.37,  1.84,  0.00,  0.00,  1.85,  1.84,  1.70,  1.21,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+           0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
+/
+
+
+&amp;noah_mp_modis_veg_categories
+ VEG_DATASET_DESCRIPTION = &quot;modified igbp modis noah&quot;
+ NVEG = 20
+/
+
+&amp;noah_mp_modis_parameters
+! 1          &#39;Evergreen Needleleaf Forest&#39;                       -&gt; USGS 14
+! 2,         &#39;Evergreen Broadleaf Forest&#39;                        -&gt; USGS 13
+! 3,         &#39;Deciduous Needleleaf Forest&#39;                       -&gt; USGS 12
+! 4,         &#39;Deciduous Broadleaf Forest&#39;                        -&gt; USGS 11
+! 5,         &#39;Mixed Forests&#39;                                     -&gt; USGS 15
+! 6,         &#39;Closed Shrublands&#39;                                 -&gt; USGS  8 &quot;shrubland&quot;
+! 7,         &#39;Open Shrublands&#39;                                   -&gt; USGS  9 &quot;shrubland/grassland&quot;
+! 8,         &#39;Woody Savannas&#39;                                    -&gt; USGS  8 &quot;shrubland&quot;
+! 9,         &#39;Savannas&#39;                                          -&gt; USGS 10
+! 10,        &#39;Grasslands&#39;                                        -&gt; USGS  7
+! 11         &#39;Permanent wetlands&#39;                                -&gt; avg of USGS 17 and 18 (herb. wooded wetland)
+! 12,        &#39;Croplands&#39;                                         -&gt; USGS  2 &quot;dryland cropland&quot;
+! 13,        &#39;Urban and Built-Up&#39;                                -&gt; USGS  1
+! 14         &#39;cropland/natural vegetation mosaic&#39;                -&gt; USGS  5 &quot;cropland/grassland&quot;
+! 15,        &#39;Snow and Ice&#39;                                      -&gt; USGS 24
+! 16,        &#39;Barren or Sparsely Vegetated&#39;                      -&gt; USGS 19
+! 17,        &#39;Water&#39;                                             -&gt; USGS 16
+! 18,        &#39;Wooded Tundra&#39;                                     -&gt; USGS 21
+! 19,        &#39;Mixed Tundra&#39;                                      -&gt; USGS 22
+! 20,        &#39;Barren Tundra&#39;                                     -&gt; USGS 23
+
+ ISURBAN   = 13
+ ISWATER   = 17
+ ISBARREN  = 16
+ ISSNOW    = 15
+ EBLFOREST =  2
+
+ !---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ !          1       2       3       4       5       6       7       8       9      10      11      12      13      14      15      16      17      18      19      20
+ !---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ CH2OP =   0.1,    0.1,    0.1,    0.1,    0.1,    0.1,    0.1,    0.1,    0.1,    0.1,    0.1,    0.1,    0.1,    0.1,    0.1,    0.1,    0.1,    0.1,    0.1,    0.1,
+ DLEAF =  0.04,   0.04,   0.04,   0.04,   0.04,   0.04,   0.04,   0.04,   0.04,   0.04,   0.04,   0.04,   0.04,   0.04,   0.04,   0.04,   0.04,   0.04,   0.04,   0.04,
+ Z0MVT =  1.09,   1.10,   0.85,   0.80,   0.80,   0.06,   0.06,   0.06,   0.86,   0.06,  0.055,   0.06,   1.00,   0.06,   0.00,   0.00,   0.00,   0.06,   0.06,   0.03,
+! Z0MVT =  0.50,   0.50,   0.50,   0.50,   0.50,   0.05,   0.06,   0.05,   0.15,   0.12,  0.30,   0.15,   0.80,   0.14,   0.00,   0.01,   0.00,   0.30,   0.15,   0.10,
+ HVT   =  20.0,   20.0,   18.0,   16.0,   16.0,   0.50,   0.50,   0.50,   16.0,   0.50,   0.65,   0.50,   15.0,   0.50,   0.00,   0.00,   0.00,   0.80,   0.80,   0.50,
+ HVB   =  8.50,   8.00,   7.00,   11.5,   10.0,   0.10,   0.10,   0.10,   5.00,   0.05,  0.075,   0.10,   1.00,   0.10,   0.00,   0.00,   0.00,   0.10,   0.10,   0.10,
+ DEN   =  0.28,   0.02,   0.28,   0.10,   0.10,   10.0,   10.0,   10.0,   0.02,   100.,   5.05,   25.0,   0.01,   25.0,   0.00,   0.01,   0.01,   1.00,   1.00,   1.00,
+ RC    =  1.20,   3.60,   1.20,   1.40,   1.40,   0.12,   0.12,   0.12,   3.00,   0.03,   0.75,   0.08,   1.00,   0.08,   0.00,   0.01,   0.01,   0.30,   0.30,   0.30,
+
+ ! Row 1:  Vis
+ ! Row 2:  Near IR
+ RHOL  =  0.07,   0.10,   0.07,   0.10,   0.10,   0.07,   0.10,   0.07,   0.10,   0.11,  0.105,   0.11,   0.00,   0.11,   0.00,   0.00,   0.00,   0.10,   0.10,   0.10,
+          0.35,   0.45,   0.35,   0.45,   0.45,   0.35,   0.45,   0.35,   0.45,   0.58,  0.515,   0.58,   0.00,   0.58,   0.00,   0.00,   0.00,   0.45,   0.45,   0.45,
+
+ ! Row 1:  Vis
+ ! Row 2:  Near IR
+ RHOS  =  0.16,   0.16,   0.16,   0.16,   0.16,   0.16,   0.16,   0.16,   0.16,   0.36,   0.26,   0.36,   0.00,   0.36,   0.00,   0.00,   0.00,   0.16,   0.16,   0.16,
+          0.39,   0.39,   0.39,   0.39,   0.39,   0.39,   0.39,   0.39,   0.39,   0.58,  0.485,   0.58,   0.00,   0.58,   0.00,   0.00,   0.00,   0.39,   0.39,   0.39,
+
+ ! Row 1:  Vis
+ ! Row 2:  Near IR
+ TAUL  =  0.05,   0.05,   0.05,   0.05,   0.05,   0.05,   0.05,   0.05,   0.05,   0.07,   0.06,   0.07,   0.00,   0.07,   0.00,   0.00,   0.00,   0.05,   0.05,   0.05,
+          0.10,   0.25,   0.10,   0.25,   0.25,   0.10,   0.10,   0.10,   0.25,   0.25,   0.25,   0.25,   0.00,   0.25,   0.00,   0.00,   0.00,   0.25,   0.25,   0.25,
+
+ ! Row 1:  Vis
+ ! Row 2:  Near IR
+ TAUS  = 0.001,  0.001,  0.001,  0.001,  0.001,  0.001,  0.001,  0.001,  0.001,  0.220, 0.1105,  0.220,  0.000,  0.220,  0.000,  0.000,  0.000,  0.001,  0.001,  0.001,
+         0.001,  0.001,  0.001,  0.001,  0.001,  0.001,  0.001,  0.001,  0.001,  0.380, 0.1905,  0.380,  0.000,  0.380,  0.000,  0.000,  0.000,  0.001,  0.001,  0.001,
+
+ XL    = 0.010,  0.010,  0.010,  0.250,  0.250,  0.010,  0.250,  0.010,  0.010,  -0.30, -0.025,  -0.30,  0.000,  -0.30,  0.000,  0.000,  0.000,  0.250,  0.250,  0.250,
+ CWPVT =   3.0,    3.0,    3.0,    3.0,    3.0,    3.0,    3.0,    3.0,    3.0,    3.0,    3.0,    3.0,    3.0,    3.0,    3.0,    3.0,    3.0,    3.0,    3.0,    3.0,
+! CWPVT =  0.18,   0.18,   0.18,   0.18,   0.18,   0.18,   0.18,   0.18,   0.18,   0.18,   0.18,   0.18,   0.18,   0.18,   0.18,   0.18,   0.18,   0.18,   0.18,   0.18,
+ C3PSN =   1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,
+ KC25  =  30.0,   30.0,   30.0,   30.0,   30.0,   30.0,   30.0,   30.0,   30.0,   30.0,   30.0,   30.0,   30.0,   30.0,   30.0,   30.0,   30.0,   30.0,   30.0,   30.0,
+ AKC   =   2.1,    2.1,    2.1,    2.1,    2.1,    2.1,    2.1,    2.1,    2.1,    2.1,    2.1,    2.1,    2.1,    2.1,    2.1,    2.1,    2.1,    2.1,    2.1,    2.1,
+ KO25  =  3.E4,   3.E4,   3.E4,   3.E4,   3.E4,   3.E4,   3.E4,   3.E4,   3.E4,   3.E4,   3.E4,   3.E4,   3.E4,   3.E4,   3.E4,   3.E4,   3.E4,   3.E4,   3.E4,   3.E4,
+ AKO   =   1.2,    1.2,    1.2,    1.2,    1.2,    1.2,    1.2,    1.2,    1.2,    1.2,    1.2,    1.2,    1.2,    1.2,    1.2,    1.2,    1.2,    1.2,    1.2,    1.2,
+ AVCMX =   2.4,    2.4,    2.4,    2.4,    2.4,    2.4,    2.4,    2.4,    2.4,    2.4,    2.4,    2.4,    2.4,    2.4,    2.4,    2.4,    2.4,    2.4,    2.4,    2.4,
+ AQE   =   1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,    1.0,
+
+ LTOVRC=   0.5,   0.55,    0.2,   0.55,    0.5,   0.65,   0.70,   0.65,   0.65,   0.50,    1.4,    1.6,    0.0,    1.2,    0.0,    0.0,    0.0,    1.3,    1.4,    1.0,
+ DILEFC=  1.20,   0.50,   1.80,   0.60,   0.80,   0.20,   0.50,   0.20,   0.50,   0.20,    0.4,   0.50,   0.00,   0.35,   0.00,   0.00,   0.00,   0.30,   0.40,   0.30,
+ DILEFW=  0.20,   4.00,   0.20,   0.20,   0.20,   0.20,   0.20,   0.20,   0.50,   0.10,    0.2,   0.20,   0.00,   0.20,   0.00,   0.00,   0.00,   0.20,   0.20,   0.20,
+ RMF25 =  3.00,   0.65,   4.00,   3.00,   3.00,   0.26,   0.26,   0.26,   0.80,   1.80,    3.2,   1.00,   0.00,   1.45,   0.00,   0.00,   0.00,   3.00,   3.00,   3.00,
+ SLA   =    80,     80,     80,     80,     80,     60,     60,     60,     50,     60,     80,     80,     60,     80,      0,      0,      0,     80,     80,     80,
+ FRAGR =  0.10,   0.20,   0.10,   0.20,   0.10,   0.20,   0.20,   0.20,   0.20,   0.20,    0.1,   0.20,   0.00,   0.20,   0.00,   0.10,   0.00,   0.10,   0.10,   0.10,
+ TMIN  =   265,    273,    268,    273,    268,    273,    273,    273,    273,    273,    268,    273,      0,    273,      0,      0,      0,    268,    268,    268,
+ VCMX25=  50.0,   60.0,   60.0,   60.0,   55.0,   40.0,   40.0,   40.0,   40.0,   40.0,   50.0,   80.0,   0.00,   60.0,   0.00,   0.00,   0.00,   50.0,   50.0,   50.0,
+ TDLEF =   278,    278,    268,    278,    268,    278,    278,    278,    278,    278,    268,    278,    278,    278,      0,      0,      0,    268,    268,    268,
+ BP    =  2.E3,   2.E3,   2.E3,   2.E3,   2.E3,   2.E3,   2.E3,   2.E3,   2.E3,   2.E3,   2.E3,   2.E3,  1.E15,   2.E3,  1.E15,   2.E3,  1.E15,   2.E3,   2.E3,   2.E3,
+ MP    =    6.,     9.,     6.,     9.,     9.,     9.,     9.,     9.,     9.,     9.,     9.,     9.,     9.,     9.,     9.,     9.,     9.,     9.,     9.,     9.,
+ QE25  =  0.06,   0.06,   0.06,   0.06,   0.06,   0.06,   0.06,   0.06,   0.06,   0.06,   0.06,   0.06,   0.00,   0.06,   0.00,   0.06,   0.00,   0.06,   0.06,   0.06,
+ RMS25 =  0.90,   0.30,   0.64,   0.10,   0.80,   0.10,   0.10,   0.10,   0.32,   0.10,   0.10,   0.10,   0.00,   0.10,   0.00,   0.00,   0.00,   0.10,   0.10,   0.00,
+ RMR25 =  0.36,   0.05,   0.05,   0.01,   0.03,   0.00,   0.00,   0.00,   0.01,   1.20,    0.0,   0.00,   0.00,   0.00,   0.00,   0.00,   0.00,   2.11,   2.11,   0.00,
+ ARM   =   2.0,    2.0,    2.0,    2.0,    2.0,    2.0,    2.0,    2.0,    2.0,    2.0,    2.0,    2.0,    2.0,    2.0,    2.0,    2.0,    2.0,    2.0,    2.0,    2.0,
+ FOLNMX=   1.5,    1.5,    1.5,    1.5,    1.5,    1.5,    1.5,    1.5,    1.5,    1.5,    1.5,    1.5,   0.00,    1.5,   0.00,    1.5,   0.00,    1.5,    1.5,    1.5,
+ WDPOOL=  1.00,   1.00,   1.00,   1.00,   1.00,   1.00,   1.00,   1.00,   1.00,   0.00,    0.5,   0.00,   0.00,   0.00,   0.00,   0.00,   0.00,   1.00,   1.00,   0.00,
+ WRRAT =  30.0,   30.0,   30.0,   30.0,   30.0,   3.00,   3.00,   3.00,   3.00,   0.00,   15.0,   0.00,   0.00,   0.00,   0.00,   0.00,   0.00,   3.00,   3.00,   0.00,
+ MRP   =  0.37,   0.23,   0.37,   0.40,   0.30,   0.19,   0.19,   0.19,   0.40,   0.17,  0.285,   0.23,   0.00,   0.23,   0.00,   0.00,   0.00,   0.23,   0.20,   0.00,
+
+! Monthly values, one row for each month:
+ SAIM  =   0.4,    0.5,    0.3,    0.4,    0.2,    0.1,    0.2,    0.1,    0.1,    0.3,    0.1,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.1,    0.1,    0.0,
+           0.4,    0.5,    0.3,    0.4,    0.2,    0.1,    0.2,    0.1,    0.1,    0.3,    0.1,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.1,    0.1,    0.0,
+           0.4,    0.5,    0.3,    0.4,    0.2,    0.1,    0.2,    0.1,    0.1,    0.3,    0.1,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.1,    0.1,    0.0,
+           0.3,    0.5,    0.4,    0.4,    0.2,    0.1,    0.2,    0.1,    0.1,    0.3,    0.1,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.1,    0.1,    0.0,
+           0.4,    0.5,    0.4,    0.4,    0.2,    0.1,    0.2,    0.1,    0.1,    0.3,    0.1,    0.0,    0.0,    0.1,    0.0,    0.0,    0.0,    0.1,    0.1,    0.0,
+           0.5,    0.5,    0.7,    0.4,    0.4,    0.2,    0.3,    0.2,    0.1,    0.4,    0.2,    0.0,    0.0,    0.2,    0.0,    0.0,    0.0,    0.2,    0.2,    0.0,
+           0.5,    0.5,    1.3,    0.9,    0.4,    0.2,    0.5,    0.2,    0.1,    0.8,    0.4,    0.0,    0.0,    0.3,    0.0,    0.0,    0.0,    0.2,    0.2,    0.0,
+           0.6,    0.5,    1.2,    1.2,    0.5,    0.1,    0.8,    0.1,    0.1,    1.3,    0.6,    0.0,    0.0,    0.5,    0.0,    0.0,    0.0,    0.3,    0.3,    0.0,
+           0.6,    0.5,    1.0,    1.6,    0.5,    0.1,    0.5,    0.1,    0.1,    1.1,    0.5,    0.0,    0.0,    0.4,    0.0,    0.0,    0.0,    0.3,    0.3,    0.0,
+           0.7,    0.5,    0.8,    1.4,    0.6,    0.1,    0.2,    0.1,    0.1,    0.4,    0.2,    0.0,    0.0,    0.1,    0.0,    0.0,    0.0,    0.2,    0.2,    0.0,
+           0.6,    0.5,    0.6,    0.6,    0.5,    0.1,    0.2,    0.1,    0.1,    0.4,    0.2,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.2,    0.2,    0.0,
+           0.5,    0.5,    0.5,    0.4,    0.3,    0.1,    0.2,    0.1,    0.1,    0.4,    0.1,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.1,    0.1,    0.0,
+
+ LAIM  =   1.6,    4.5,    0.0,    0.0,    1.0,    1.0,    1.0,    1.0,    1.0,    0.4,    0.3,    0.0,    0.0,    0.4,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+           1.6,    4.5,    0.0,    0.0,    1.0,    1.0,    1.0,    1.0,    1.0,    0.5,   0.45,    0.0,    0.0,    0.5,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+           1.6,    4.5,    0.0,    0.3,    1.0,    1.0,    1.0,    1.0,    1.0,    0.6,    0.5,    0.0,    0.0,    0.6,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+           1.6,    4.5,    0.6,    1.2,    1.0,    1.0,    1.5,    1.0,    1.0,    0.7,   0.55,    0.0,    0.0,    0.7,    0.0,    0.0,    0.0,    0.2,    0.2,    0.0,
+           5.3,    4.5,    1.2,    3.0,    2.3,    1.0,    2.0,    1.0,    1.0,    1.2,   0.85,    1.0,    0.0,    1.2,    0.0,    0.0,    0.0,    0.5,    0.5,    0.0,
+           5.5,    4.5,    2.0,    4.7,    3.5,    1.0,    2.5,    1.0,    1.0,    3.0,   1.85,    2.0,    0.0,    3.0,    0.0,    0.0,    0.0,    1.0,    1.0,    0.0,
+           5.3,    4.5,    2.6,    4.5,    4.3,    1.0,    3.0,    1.0,    1.0,    3.5,    2.6,    3.0,    0.0,    3.5,    0.0,    0.0,    0.0,    2.0,    2.0,    0.0,
+           5.3,    4.5,    1.7,    3.4,    3.3,    1.0,    2.5,    1.0,    1.0,    1.5,   2.25,    3.0,    0.0,    1.5,    0.0,    0.0,    0.0,    1.0,    1.0,    0.0,
+           4.2,    4.5,    1.0,    1.2,    2.2,    1.0,    1.5,    1.0,    1.0,    0.7,    1.6,    1.5,    0.0,    0.7,    0.0,    0.0,    0.0,    0.5,    0.5,    0.0,
+           2.2,    4.5,    0.5,    0.3,    1.2,    1.0,    1.0,    1.0,    1.0,    0.6,    1.1,    0.0,    0.0,    0.6,    0.0,    0.0,    0.0,    0.2,    0.2,    0.0,
+           2.2,    4.5,    0.2,    0.0,    1.2,    1.0,    1.0,    1.0,    1.0,    0.5,   0.65,    0.0,    0.0,    0.5,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+           2.2,    4.5,    0.0,    0.0,    1.2,    1.0,    1.0,    1.0,    1.0,    0.4,    0.4,    0.0,    0.0,    0.4,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+
+! LAIM  =   5.1,    3.3,    0.0,    1.9,    3.0,    1.0,    0.8,    0.5,    0.5,    0.7,    0.3,    1.8,    0.0,    2.4,    0.0,    0.0,    0.0,    0.6,    0.7,    0.0,
+!           5.0,    3.6,    0.0,    1.9,    2.9,    1.0,    0.6,    1.0,    1.0,    0.7,   0.45,    1.9,    0.0,    2.6,    0.0,    0.0,    0.0,    0.4,    0.4,    0.0,
+!           5.1,    4.4,    0.0,    2.1,    3.3,    1.0,    0.8,    1.8,    1.7,    1.1,    0.5,    2.6,    0.0,    2.9,    0.0,    0.0,    0.0,    0.4,    0.4,    0.0,
+!           5.3,    5.4,    0.6,    2.5,    4.0,    1.0,    0.9,    2.6,    2.9,    1.7,   0.55,    3.9,    0.0,    3.4,    0.0,    0.0,    0.0,    0.4,    0.4,    0.0,
+!           5.9,    6.2,    1.2,    3.1,    5.0,    1.0,    1.5,    3.4,    3.6,    2.5,   0.85,    5.2,    0.0,    4.0,    0.0,    0.0,    0.0,    0.8,    1.0,    0.0,
+!           6.3,    6.4,    2.0,    3.3,    5.4,    1.0,    2.1,    3.6,    3.5,    2.7,   1.85,    5.6,    0.0,    4.2,    0.0,    0.0,    0.0,    2.0,    2.3,    0.0,
+!           6.4,    5.9,    2.6,    3.3,    5.4,    1.0,    2.6,    3.4,    2.9,    2.8,    2.6,    5.3,    0.0,    4.1,    0.0,    0.0,    0.0,    3.3,    3.3,    0.0,
+!           6.1,    5.6,    1.7,    3.1,    5.0,    1.0,    2.4,    3.2,    2.7,    2.4,   2.25,    4.5,    0.0,    3.8,    0.0,    0.0,    0.0,    3.3,    3.0,    0.0,
+!           6.0,    5.3,    1.0,    2.9,    4.8,    1.0,    2.2,    2.9,    2.4,    2.1,    1.6,    4.1,    0.0,    3.7,    0.0,    0.0,    0.0,    2.8,    3.0,    0.0,
+!           5.5,    4.7,    0.5,    2.6,    4.1,    1.0,    1.6,    2.3,    1.8,    1.7,    1.1,    3.2,    0.0,    3.2,    0.0,    0.0,    0.0,    1.4,    1.4,    0.0,
+!           5.2,    4.0,    0.2,    2.2,    3.4,    1.0,    1.0,    1.5,    1.4,    1.3,   0.65,    2.3,    0.0,    2.7,    0.0,    0.0,    0.0,    0.5,    0.7,    0.0,
+!           5.1,    3.2,    0.0,    1.9,    3.0,    1.0,    0.9,    0.7,    0.7,    0.8,    0.4,    1.7,    0.0,    2.4,    0.0,    0.0,    0.0,    0.8,    0.7,    0.0,
+
+ SLAREA=0.0090, 0.0200, 0.0200, 0.0258, 0.0223, 0.0227, 0.0188, 0.0227, 0.0236, 0.0060, 0.0295, 0.0200, 0.0228, 0.0223,   0.02,   0.02, 0.0422,   0.02,   0.02,   0.02,
+
+! Five types, one row for each type.
+ EPS   =  0.46,   0.00,   0.00,  46.86,  30.98,  21.62,   0.11,  21.62,  22.80,   0.02,  0.815,   0.00,  41.87,   0.04,    0.0,    0.0,   2.31,    0.0,    0.0,    0.0,
+          3.34,   0.00,   0.00,   0.38,   0.96,   0.92,   0.22,   0.92,   0.59,   0.05,  0.535,   0.00,   0.98,   0.09,    0.0,    0.0,   1.47,    0.0,    0.0,    0.0,
+          1.85,   0.00,   0.00,   1.84,   1.84,   1.73,   1.26,   1.73,   1.37,   0.03,  0.605,   0.00,   1.82,   0.05,    0.0,    0.0,   1.70,    0.0,    0.0,    0.0,
+           0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+           0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+/
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">soilparm</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">soilparm</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">soilparm</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Soil Parameters
+STAS
+19,1   &#39;BB      DRYSMC      F11     MAXSMC   REFSMC   SATPSI  SATDK       SATDW     WLTSMC  QTZ    &#39;
+1,     2.79,    0.010,    -0.472,   0.339,   0.236,   0.069,  1.07E-6,  0.608E-6,   0.010,  0.92, &#39;SAND&#39;
+2,     4.26,    0.028,    -1.044,   0.421,   0.383,   0.036,  1.41E-5,  0.514E-5,   0.028,  0.82, &#39;LOAMY SAND&#39;
+3,     4.74,    0.047,    -0.569,   0.434,   0.383,   0.141,  5.23E-6,  0.805E-5,   0.047,  0.60, &#39;SANDY LOAM&#39;
+4,     5.33,    0.084,     0.162,   0.476,   0.360,   0.759,  2.81E-6,  0.239E-4,   0.084,  0.25, &#39;SILT LOAM&#39;
+5,     5.33,    0.084,     0.162,   0.476,   0.383,   0.759,  2.81E-6,  0.239E-4,   0.084,  0.10, &#39;SILT&#39;
+6,     5.25,    0.066,    -0.327,   0.439,   0.329,   0.355,  3.38E-6,  0.143E-4,   0.066,  0.40, &#39;LOAM&#39;
+7,     6.66,    0.067,    -1.491,   0.404,   0.314,   0.135,  4.45E-6,  0.990E-5,   0.067,  0.60, &#39;SANDY CLAY LOAM&#39;
+8,     8.72,    0.120,    -1.118,   0.464,   0.387,   0.617,  2.04E-6,  0.237E-4,   0.120,  0.10, &#39;SILTY CLAY LOAM&#39;
+9,     8.17,    0.103,    -1.297,   0.465,   0.382,   0.263,  2.45E-6,  0.113E-4,   0.103,  0.35, &#39;CLAY LOAM&#39;
+10,   10.73,    0.100,    -3.209,   0.406,   0.338,   0.098,  7.22E-6,  0.187E-4,   0.100,  0.52, &#39;SANDY CLAY&#39;
+11,   10.39,    0.126,    -1.916,   0.468,   0.404,   0.324,  1.34E-6,  0.964E-5,   0.126,  0.10, &#39;SILTY CLAY&#39;
+12,   11.55,    0.138,    -2.138,   0.468,   0.412,   0.468,  9.74E-7,  0.112E-4,   0.138,  0.25, &#39;CLAY&#39;
+13,    5.25,    0.066,    -0.327,   0.439,   0.329,   0.355,  3.38E-6,  0.143E-4,   0.066,  0.05, &#39;ORGANIC MATERIAL&#39;
+14,     0.0,      0.0,       0.0,     1.0,     0.0,     0.0,      0.0,       0.0,     0.0,  0.60, &#39;WATER&#39;
+15,    2.79,    0.006,    -1.111,    0.20,    0.17,   0.069,  1.41E-4,  0.136E-3,   0.006,  0.07, &#39;BEDROCK&#39;
+16,    4.26,    0.028,    -1.044,   0.421,   0.283,   0.036,  1.41E-5,  0.514E-5,   0.028,  0.25, &#39;OTHER(land-ice)&#39;
+17,   11.55,    0.030,   -10.472,   0.468,   0.454,   0.468,  9.74E-7,  0.112E-4,   0.030,  0.60, &#39;PLAYA&#39;
+18,    2.79,    0.006,    -0.472,   0.200,    0.17,   0.069,  1.41E-4,  0.136E-3,   0.006,  0.52, &#39;LAVA&#39;
+19,    2.79,     0.01,    -0.472,   0.339,   0.236,   0.069,  1.07E-6,  0.608E-6,    0.01,  0.92, &#39;WHITE SAND&#39;
+Soil Parameters
+STAS-RUC
+19,1   &#39;BB      DRYSMC       HC     MAXSMC   REFSMC   SATPSI  SATDK       SATDW     WLTSMC  QTZ    &#39;
+1,     4.05,    0.045,      1.47,   0.395,   0.236,   0.121,  1.76E-4,  0.608E-6,   0.068,  0.92, &#39;SAND&#39;
+2,     4.38,    0.057,      1.41,   0.410,   0.383,   0.090,  1.56E-4,  0.514E-5,   0.075,  0.82, &#39;LOAMY SAND&#39;
+3,     4.90,    0.065,      1.34,   0.435,   0.383,   0.218,  3.47E-5,  0.805E-5,   0.114,  0.60, &#39;SANDY LOAM&#39;
+4,     5.30,    0.067,      1.27,   0.485,   0.360,   0.786,  7.20E-6,  0.239E-4,   0.179,  0.25, &#39;SILT LOAM&#39;
+5,     5.30,    0.034,      1.27,   0.485,   0.383,   0.786,  7.20E-6,  0.239E-4,   0.179,  0.10, &#39;SILT&#39;
+6,     5.39,    0.078,      1.21,   0.451,   0.329,   0.478,  6.95E-6,  0.143E-4,   0.155,  0.40, &#39;LOAM&#39;
+7,     7.12,    0.100,      1.18,   0.420,   0.314,   0.299,  6.30E-6,  0.990E-5,   0.175,  0.60, &#39;SANDY CLAY LOAM&#39;
+8,     7.75,    0.089,      1.32,   0.477,   0.387,   0.356,  1.70E-6,  0.237E-4,   0.218,  0.10, &#39;SILTY CLAY LOAM&#39;
+9,     8.52,    0.095,      1.23,   0.476,   0.382,   0.630,  2.45E-6,  0.113E-4,   0.250,  0.35, &#39;CLAY LOAM&#39;
+10,   10.40,    0.100,      1.18,   0.426,   0.338,   0.153,  2.17E-6,  0.187E-4,   0.219,  0.52, &#39;SANDY CLAY&#39;
+11,   10.40,    0.070,      1.15,   0.492,   0.404,   0.490,  1.03E-6,  0.964E-5,   0.283,  0.10, &#39;SILTY CLAY&#39;
+12,   11.40,    0.068,      1.09,   0.482,   0.412,   0.405,  1.28E-6,  0.112E-4,   0.286,  0.25, &#39;CLAY&#39;
+13,    5.39,    0.078,      1.21,   0.451,   0.329,   0.478,  6.95E-6,  0.143E-4,   0.155,  0.05, &#39;ORGANIC MATERIAL&#39;
+14,     0.0,      0.0,      4.18,   1.0,     1.0,     0.0,      0.0,       0.0,     0.0,    0.00, &#39;WATER&#39;
+15,    4.05,    0.004,      2.03,   0.200,   0.17,   0.121,  1.41E-4,  0.136E-3,   0.006,  0.60, &#39;BEDROCK&#39;
+16,    4.90,    0.065,      2.10,   0.435,   0.283,   0.218,  3.47E-5,  0.514E-5,   0.114,  0.05, &#39;OTHER(land-ice)&#39;
+17,   11.40,    0.030,      1.41,   0.468,   0.454,   0.468,  9.74E-7,  0.112E-4,   0.030,  0.60, &#39;PLAYA&#39;
+18,    4.05,    0.006,      1.41,   0.200,   0.17,   0.069,  1.41E-4,  0.136E-3,   0.060,  0.52, &#39;LAVA&#39;
+19,    4.05,     0.01,      1.47,   0.339,   0.236,   0.069,  1.76E-4,  0.608E-6,   0.060,  0.92, &#39;WHITE SAND&#39;
+Soil Parameters
+ROSETTA
+12,1 &#39;theta_res   theta_sat   vGn_alpha       vGn_n      k_soil          BB      DRYSMC          HC      MAXSMC      REFSMC      SATPSI       SATDK       SATDW      WLTSMC         QTZ    &#39;
+1         0.098       0.459      -1.496       1.253 1.70799e-06        1.40       0.068        1.09       0.482       0.412       0.405     1.28E-6    0.112E-4       0.286        0.25    &#39;CLAY&#39; 
+2         0.079       0.442      -1.581       1.416 9.47297e-07        8.52       0.095        1.23       0.476       0.382       0.630     2.45E-6    0.113E-4       0.250        0.35    &#39;CLAY LOAM&#39;
+3         0.061       0.399      -1.112       1.472 1.39472e-06        5.39       0.078        1.21       0.451       0.329       0.478     6.95E-6    0.143E-4       0.155        0.40    &#39;LOAM&#39; 
+4         0.049       0.390      -3.475       1.746 1.21755e-05        4.38       0.057        1.41       0.410       0.383       0.090     1.56E-4    0.514E-5       0.075        0.82    &#39;LOAMY SAND&#39;
+5         0.053       0.375      -3.524       3.177 7.43852e-05        4.05       0.045        1.47       0.395       0.236       0.121     1.76E-4    0.608E-6       0.068        0.92    &#39;SAND&#39;
+6         0.117       0.385      -3.342       1.208 1.31367e-06        0.40       0.100        1.18       0.426       0.338       0.153     2.17E-6    0.187E-4       0.219        0.52    &#39;SANDY CLAY&#39;
+7         0.063       0.384      -2.109       1.330 1.52576e-06        7.12       0.100        1.18       0.420       0.314       0.299     6.30E-6    0.990E-5       0.175        0.60    &#39;SANDY CLAY LOAM&#39;
+8         0.039       0.387      -2.667       1.449 4.43084e-06        4.90       0.065        1.34       0.435       0.383       0.218     3.47E-5    0.805E-5       0.114        0.60    &#39;SANDY LOAM&#39;
+9         0.050       0.489      -0.658       1.679 5.06391e-06        5.30       0.034        1.27       0.485       0.383       0.786     7.20E-6    0.239E-4       0.179        0.10    &#39;SILT&#39;
+10        0.111       0.481      -1.622       1.321 1.11298e-06        0.40       0.070        1.15       0.492       0.404       0.490     1.03E-6    0.964E-5       0.283        0.10    &#39;SILTY CLAY&#39;
+11        0.090       0.482      -0.839       1.521 1.28673e-06        7.75       0.089        1.32       0.477       0.387       0.356     1.70E-6    0.237E-4       0.218        0.10    &#39;SILTY CLAY LOAM&#39;
+12        0.065       0.439      -0.506       1.663 2.11099e-06        5.30       0.067        1.27       0.485       0.360       0.786     7.20E-6    0.239E-4       0.179        0.25    &#39;SILT LOAM&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">vegparm</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">vegparm</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">vegparm</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vegetation Parameters
+USGS
+27,1, &#39;SHDFAC NROOT   RS      RGL      HS      SNUP  MAXALB   LAIMIN  LAIMAX  EMISSMIN EMISSMAX ALBEDOMIN ALBEDOMAX  Z0MIN    Z0MAX  &#39;
+1,      .10,   1,    200.,   999.,   999.0,   0.04,    46.,    1.00,   1.00,   .880,    .880,     .15,      .15,      .50,     .50,     &#39;Urban and Built-Up Land&#39;  
+2,      .80,   3,     40.,   100.,   36.25,   0.04,    66.,    1.56,   5.68,   .920,    .985,     .17,      .23,      .05,     .15,     &#39;Dryland Cropland and Pasture&#39; 
+3,      .80,   3,     40.,   100.,   36.25,   0.04,    66.,    1.56,   5.68,   .930,    .985,     .20,      .25,      .02,     .10,     &#39;Irrigated Cropland and Pasture&#39; 
+4,      .80,   3,     40.,   100.,   36.25,   0.04,    66.,    1.00,   4.50,   .920,    .985,     .18,      .23,      .05,     .15,     &#39;Mixed Dryland/Irrigated Cropland and Pasture&#39; 
+5,      .80,   3,     40.,   100.,   36.25,   0.04,    68.,    2.29,   4.29,   .920,    .980,     .18,      .23,      .05,     .14,     &#39;Cropland/Grassland Mosaic&#39;
+6,      .80,   3,     70.,    65.,   44.14,   0.04,    60.,    2.00,   4.00,   .930,    .985,     .16,      .20,      .20,     .20,     &#39;Cropland/Woodland Mosaic&#39; 
+7,      .80,   3,     40.,   100.,   36.35,   0.04,    70.,    0.52,   2.90,   .920,    .960,     .19,      .23,      .10,     .12,     &#39;Grassland&#39; 
+8,      .70,   3,    300.,   100.,   42.00,   0.03,    60.,    0.50,   3.66,   .930,    .930,     .25,      .30,      .01,     .05,     &#39;Shrubland&#39; 
+9,      .70,   3,    170.,   100.,   39.18,  0.035,    65.,    0.60,   2.60,   .930,    .950,     .22,      .30,      .01,     .06,     &#39;Mixed Shrubland/Grassland&#39; 
+10,     .50,   3,     70.,    65.,   54.53,   0.04,    50.,    0.50,   3.66,   .920,    .920,     .20,      .20,      .15,     .15,     &#39;Savanna&#39; 
+11,     .80,   4,    100.,    30.,   54.53,   0.08,    58.,    1.85,   3.31,   .930,    .930,     .16,      .17,      .50,     .50,     &#39;Deciduous Broadleaf Forest&#39; 
+12,     .70,   4,    150.,    30.,   47.35,   0.08,    54.,    1.00,   5.16,   .930,    .940,     .14,      .15,      .50,     .50,     &#39;Deciduous Needleleaf Forest&#39; 
+13,     .95,   4,    150.,    30.,   41.69,   0.08,    35.,    3.08,   6.48,   .950,    .950,     .12,      .12,      .50,     .50,     &#39;Evergreen Broadleaf Forest&#39;
+14,     .70,   4,    125.,    30.,   47.35,   0.08,    52.,    5.00,   6.40,   .950,    .950,     .12,      .12,      .50,     .50,     &#39;Evergreen Needleleaf Forest&#39;  
+15,     .80,   4,    125.,    30.,   51.93,   0.08,    53.,    2.80,   5.50,   .930,    .970,     .17,      .25,      .20,     .50,     &#39;Mixed Forest&#39; 
+16,     .00,   0,    100.,    30.,   51.75,   0.01,    70.,    0.01,   0.01,   .980,    .980,     .08,      .08,   0.0001,  0.0001,     &#39;Water Bodies&#39; 
+17,     .60,   2,     40.,   100.,   60.00,   0.01,    68.,    1.50,   5.65,   .950,    .950,     .14,      .14,      .20,     .20,     &#39;Herbaceous Wetland&#39; 
+18,     .60,   2,    100.,    30.,   51.93,   0.02,    50.,    2.00,   5.80,   .950,    .950,     .14,      .14,      .40,     .40,     &#39;Wooded Wetland&#39; 
+19,     .01,   1,    999.,   999.,   999.0,   0.02,    75.,    0.10,   0.75,   .900,    .900,     .38,      .38,      .01,     .01,     &#39;Barren or Sparsely Vegetated&#39; 
+20,     .60,   3,    150.,   100.,   42.00,  0.025,    68.,    0.41,   3.35,   .920,    .920,     .15,      .20,      .10,     .10,     &#39;Herbaceous Tundra&#39; 
+21,     .60,   3,    150.,   100.,   42.00,  0.025,    55.,    0.41,   3.35,   .930,    .930,     .15,      .20,      .30,     .30,     &#39;Wooded Tundra&#39; 
+22,     .60,   3,    150.,   100.,   42.00,  0.025,    60.,    0.41,   3.35,   .920,    .920,     .15,      .20,      .15,     .15,     &#39;Mixed Tundra&#39; 
+23,     .30,   2,    200.,   100.,   42.00,   0.02,    75.,    0.41,   3.35,   .900,    .900,     .25,      .25,      .05,     .10,     &#39;Bare Ground Tundra&#39; 
+24,     .00,   1,    999.,   999.,   999.0,   0.02,    82.,    0.01,   0.01,   .950,    .950,     .55,      .70,    0.001,   0.001,     &#39;Snow or Ice&#39; 
+25,     .50,   1,     40.,   100.,   36.25,   0.02,    75.,    0.01,   0.01,   .890,    .890,     .30,      .30,      .01,     .01,     &#39;Playa&#39; 
+26,     .00,   0,    999.,   999.,   999.0,   0.02,    75.,    0.01,   0.01,   .880,    .880,     .16,      .16,      .15,     .15,     &#39;Lava&#39;   
+27,     .00,   0,    999.,   999.,   999.0,   0.02,    75.,    0.01,   0.01,   .830,    .830,     .60,      .60,      .01,     .01,     &#39;White Sand&#39; 
+TOPT_DATA
+298.0
+CMCMAX_DATA
+0.5E-3
+CFACTR_DATA
+0.5
+RSMAX_DATA
+5000.0
+BARE
+19
+NATURAL
+5
+Vegetation Parameters
+MODIFIED_IGBP_MODIS_NOAH
+20,1, &#39;SHDFAC NROOT   RS      RGL      HS      SNUP  MAXALB   LAIMIN  LAIMAX   EMISSMIN EMISSMAX ALBEDOMIN ALBEDOMAX   Z0MIN    Z0MAX&#39;
+1       .70,   4,    125.,    30.,   47.35,   0.08,    52.,    5.00,   6.40,   .950,    .950,     .12,      .12,      .50,     .50,         &#39;Evergreen Needleleaf Forest&#39;
+2,      .95,   4,    150.,    30.,   41.69,   0.08,    35.,    3.08,   6.48,   .950,    .950,     .12,      .12,      .50,     .50,         &#39;Evergreen Broadleaf Forest&#39;
+3,      .70,   4,    150.,    30.,   47.35,   0.08,    54.,    1.00,   5.16,   .930,    .940,     .14,      .15,      .50,     .50,         &#39;Deciduous Needleleaf Forest&#39;
+4,      .80,   4,    100.,    30.,   54.53,   0.08,    58.,    1.85,   3.31,   .930,    .930,     .16,      .17,      .50,     .50,         &#39;Deciduous Broadleaf Forest&#39;
+5,      .80,   4,    125.,    30.,   51.93,   0.08,    53.,    2.80,   5.50,   .930,    .970,     .17,      .25,      .20,     .50,         &#39;Mixed Forests&#39;
+6,      .70,   3,    300.,   100.,   42.00,   0.03,    60.,    0.50,   3.66,   .930,    .930,     .25,      .30,      .01,     .05,         &#39;Closed Shrublands&#39;
+7,      .70,   3,    170.,   100.,   39.18,  0.035,    65.,    0.60,   2.60,   .930,    .950,     .22,      .30,      .01,     .06,         &#39;Open Shrublands&#39;
+8,      .70,   3,    300.,   100.,   42.00,   0.03,    60.,    0.50,   3.66,   .930,    .930,     .25,      .30,      .01,     .05,         &#39;Woody Savannas&#39;
+9,      .50,   3,     70.,    65.,   54.53,   0.04,    50.,    0.50,   3.66,   .920,    .920,     .20,      .20,      .15,     .15,         &#39;Savannas&#39;
+10,     .80,   3,     40.,   100.,   36.35,   0.04,    70.,    0.52,   2.90,   .920,    .960,     .19,      .23,      .10,     .12,         &#39;Grasslands&#39;
+11      .60,   2,     70.,    65.,   55.97   0.015     59.,    1.75,   5.72,   .950,    .950,     .14,      .14,      .30,     .30,         &#39;Permanent wetlands&#39;
+12,     .80,   3,     40.,   100.,   36.25,   0.04,    66.,    1.56,   5.68,   .920,    .985,     .17,      .23,      .05,     .15,         &#39;Croplands&#39;
+13,     .10,   1,    200.,   999.,   999.0,   0.04,    46.,    1.00,   1.00,   .880,    .880,     .15,      .15,      .50,     .50,         &#39;Urban and Built-Up&#39;
+14      .80,   3,     40.,   100.,   36.25,   0.04,    68.,    2.29,   4.29,   .920,    .980,     .18,      .23,      .05,     .14,         &#39;cropland/natural vegetation mosaic&#39;
+15,     .00,   1,    999.,   999.,   999.0,   0.02,    82.,    0.01,   0.01,   .950,    .950,     .55,      .70,    0.001,   0.001,         &#39;Snow and Ice&#39;
+16,     .01,   1,    999.,   999.,   999.0,   0.02,    75.,    0.10,   0.75,   .900,    .900,     .38,      .38,      .01,     .01,         &#39;Barren or Sparsely Vegetated&#39;
+17,     .00,   0,    100.,    30.,   51.75,   0.01,    70.,    0.01,   0.01,   .980,    .980,     .08,      .08,   0.0001,  0.0001,         &#39;Water&#39;
+18,     .60,   3,    150.,   100.,   42.00,  0.025,    55.,    0.41,   3.35,   .930,    .930,     .15,      .20,      .30,     .30,         &#39;Wooded Tundra&#39;
+19,     .60,   3,    150.,   100.,   42.00,  0.025,    60.,    0.41,   3.35,   .920,    .920,     .15,      .20,      .15,     .15,         &#39;Mixed Tundra&#39;
+20,     .30,   2,    200.,   100.,   42.00,   0.02,    75.,    0.41,   3.35,   .900,    .900,     .25,      .25,      .05,     .10,         &#39;Barren Tundra&#39;
+TOPT_DATA
+298.0
+CMCMAX_DATA
+0.5E-3
+CFACTR_DATA
+0.5
+RSMAX_DATA
+5000.0
+BARE
+16
+NATURAL
+14
+Vegetation Parameters
+USGS-RUC
+27,1, &#39;ALBEDO    Z0   LEMI     PC   SHDFAC NROOT   RS      RGL      HS      SNUP    LAI   MAXALB&#39;
+1,     .18,     .50,   .88,   .40,   .10,   1,    200.,   999.,   999.0,   0.04,   4.0,     40.,    &#39;Urban and Built-Up Land&#39;
+2,     .17,     .06,   .92,   .30,   .80,   3,     40.,   100.,   36.25,   0.04,   4.0,     64.,    &#39;Dryland Cropland and Pasture&#39;
+3,     .18,     .075,  .92,   .40,   .80,   3,     40.,   100.,   36.25,   0.04,   4.0,     64.,    &#39;Irrigated Cropland and Pasture&#39;
+4,     .18,     .065,  .92,   .40,   .80,   3,     40.,   100.,   36.25,   0.04,   4.0,     64.,    &#39;Mixed Dryland/Irrigated Cropland and Pasture&#39;
+5,     .18,     .05,   .92,   .40,   .80,   3,     40.,   100.,   36.25,   0.04,   4.0,     64.,    &#39;Cropland/Grassland Mosaic&#39;
+6,     .16,     .20,   .93,   .40,   .80,   3,     70.,    65.,   44.14,   0.04,   4.0,     60.,    &#39;Cropland/Woodland Mosaic&#39;
+7,     .19,     .075   .92,   .40,   .80,   3,     40.,   100.,   36.35,   0.04,   4.0,     64.,    &#39;Grassland&#39;
+8,     .22,     .10,   .88,   .40,   .70,   3,    300.,   100.,   42.00,   0.03,   4.0,     69.,    &#39;Shrubland&#39;
+9,     .20,     .11,   .90,   .40,   .70,   3,    170.,   100.,   39.18,  0.035,   4.0,     67.,    &#39;Mixed Shrubland/Grassland&#39;
+10,    .20,     .15,   .92,   .40,   .50,   3,     70.,    65.,   54.53,   0.04,   4.0,     45.,    &#39;Savanna&#39;
+11,    .16,     .50,   .93,   .55,   .80,   4,    100.,    30.,   54.53,   0.08,   4.0,     58.,    &#39;Deciduous Broadleaf Forest&#39;
+12,    .14,     .50,   .94,   .55,   .70,   4,    150.,    30.,   47.35,   0.08,   4.0,     54.,    &#39;Deciduous Needleleaf Forest&#39;
+13,    .12,     .50,   .95,   .55,   .95,   4,    150.,    30.,   41.69,   0.08,   4.0,     32.,    &#39;Evergreen Broadleaf Forest&#39;
+14,    .12,     .50,   .95,   .55,   .70,   4,    125.,    30.,   47.35,   0.08,   4.0,     52.,    &#39;Evergreen Needleleaf Forest&#39;
+15,    .13,     .50,   .94,   .55,   .80,   4,    125.,    30.,   51.93,   0.08,   4.0,     53.,    &#39;Mixed Forest&#39;
+16,    .08,    .0001,  .98,   .00,   .00,   0,    100.,    30.,   51.75,   0.01,   4.0,     70.,    &#39;Water Bodies&#39;
+17,    .14,     .20,   .95,   .55,   .60,   2,     40.,   100.,   60.00,   0.01,   4.0,     35.,    &#39;Herbaceous Wetland&#39;
+18,    .14,     .40,   .95,   .55,   .60,   2,    100.,    30.,   51.93,   0.02,   4.0,     30.,    &#39;Wooded Wetland&#39;
+19,    .25,     .05,   .85,   .30,   .01,   1,    999.,   999.,   999.0,   0.02,   4.0,     69.,    &#39;Barren or Sparsely Vegetated&#39;
+20,    .15,     .10,   .92,   .30,   .60,   3,    150.,   100.,   42.00,  0.025,   4.0,     58.,    &#39;Herbaceous Tundra&#39;
+21,    .15,     .15,   .93,   .40,   .60,   3,    150.,   100.,   42.00,  0.025,   4.0,     55.,    &#39;Wooded Tundra&#39;
+22,    .15,     .10,   .92,   .40,   .60,   3,    150.,   100.,   42.00,  0.025,   4.0,     55.,    &#39;Mixed Tundra&#39;
+23,    .25,     .065   .85,   .30,   .30,   2,    200.,   100.,   42.00,   0.02,   4.0,     65.,    &#39;Bare Ground Tundra&#39;
+24,    .55,     .05,   .95,   .00,   .00,   1,    999.,   999.,   999.0,   0.02,   4.0,     75.,    &#39;Snow or Ice&#39;
+25,    .30,     .01,   .85,   .30,   .50,   1,     40.,   100.,   36.25,   0.02,   4.0,     69.,    &#39;Playa&#39;
+26,    .16,     .15,   .85,   .00,   .00,   0,    999.,   999.,   999.0,   0.02,   4.0,     69.,    &#39;Lava&#39;
+27,    .60,     .01,   .90,   .00,   .00,   0,    999.,   999.,   999.0,   0.02,   4.0,     69.,    &#39;White Sand&#39;
+TOPT_DATA
+298.0
+CMCMAX_DATA
+0.5E-3
+CFACTR_DATA
+0.5
+RSMAX_DATA
+5000.0
+BARE
+19
+NATURAL
+5
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "pysumma"
+        },
+        kernelOptions: {
+            kernelName: "pysumma",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'pysumma'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="notebooks.html" title="previous page">Content with notebooks</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By YoungDon Choi, Andrew Bennett<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
