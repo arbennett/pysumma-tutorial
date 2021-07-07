@@ -1,3 +1,5 @@
+[![Website](https://github.com/DavidChoi76/pysumma-tutorial/blob/master/docs/logo.png)](https://davidchoi76.github.io/pysumma-tutorial/)
+
 # pysumma-tutorial
 
 ! WARNING: This tutorial is a very rough work in progress. Some of the notebooks may lack explanatory content or fully explain the functionality. These are likely to be updated in the future

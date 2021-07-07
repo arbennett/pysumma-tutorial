@@ -1,0 +1,22 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+#
+- file: intro
+- file: content
+  sections:
+    - file: markdown
+    - file: notebooks
+    - file: A. Explore file manger of SUMMA 3.0.3.ipynb
+    - file: B. Explore decision file of SUMMA 3.0.0.ipynb
+    - file: C. Explore forcing data of SUMMA 3.0.0.ipynb
+    - file: D. Explore local attributes, local parameters (global hru) and basin parameters (global gru) of SUMMA 3.0.ipynb
+    - file: E. Explore Trial parameters, Output control and Noah-MP tables of SUMMA 3.0.ipynb
+    - file: F. Explore Initial conditions restart or state file.ipynb
+    - file: G-1. SUMMA simulation using Output Control.ipynb
+    - file: G-2. Ensemble simulation using different parameterizations (decisions).ipynb
+    - file: G-3. Ensemble simulation using different values of a Local Parameters (Global HRU).ipynb
+    - file: G-4. Ensemble simulation using different values of a Local Attributes.ipynb
+    - file: G-5. Ensemble simulation using different values of a Trial Parameters.ipynb
+    - file: G-6. Ensemble simulation using different file manager files.ipynb
+    - file: G-7. Ensemble simulation using different decisions and parameter trials setting.ipynb
+
